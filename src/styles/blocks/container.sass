@@ -1,8 +1,20 @@
 @media screen and (max-width: 899px)
-  .container__sidebar
+  .container__header--left
+    background-color: url("https://www.datocms-assets.com/37833/1605798019-header-left-bg-2x.png")
+    background-position: 50% 50%
+    backgroun-size: cover
+  .container__header--right
+  .container__main
+    margin-top: 100px
+
+  .container__header
+    display: flex
+    flex-direction: row
+
+  .container__navbar
+    align-items: center
     box-sizing: border-box
     width: 200px
-    height: 100%
     position: fixed
     top: 0
     right: 0
@@ -12,10 +24,12 @@
     transform: translate3d(-200px, 0, 0)
     transition: transform 0.2s ease-in-out
     padding: 20px
-    background-color: $light-bg-color
+    background-color: $light-body-color
 
     .container.is-open &
-      transform: translate3d(0px, 0, 0);
+      transform: translate3d(0px, 0, 0)
+      display: flex
+      align-items: center
 
   .container__body
     transform: translate3d(0px, 0, 0)
@@ -25,20 +39,26 @@
       transform: translate3d(200px, 0, 0)
 
 @media screen and (min-width: 900px)
+  .container__header--left
+    width: 50%
   .container
     display: flex
+    flex-direction: column
     padding: 0
-
   .container__mobile-header
     display: none
 
-  .container__sidebar
-    display: block
-    width: 30%
+  .container__navbar
+    display: flex
+    flex-direction: row
+    width: 100%
     min-width: 320px
     box-sizing: border-box
-    padding: 40px
+    padding: 25px
     background-color: $light-bg-color
+    -webkit-box-shadow: 0px 10px 5px -1px rgba(0,0,0,0.04)
+    -moz-box-shadow: 0px 10px 5px -1px rgba(0,0,0,0.04)
+    box-shadow: 0px 10px 5px -1px rgba(0,0,0,0.04)
 
   .container__body
     flex: 1
