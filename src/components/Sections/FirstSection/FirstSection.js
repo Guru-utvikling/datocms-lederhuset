@@ -16,7 +16,7 @@ const FirstSection = () => {
           <Link className='header__CTABtn' to='/'>
             FOR SELSKAPER
           </Link>
-          <Link className='header__CTABtn' to='/'>
+          <Link className='header__CTABtn' to='/for-ansatte'>
             FOR ANSATTE
           </Link>
         </div>

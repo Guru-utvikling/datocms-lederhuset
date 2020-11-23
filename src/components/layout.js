@@ -7,7 +7,8 @@ import { StaticQuery, graphql } from "gatsby"
 import { HelmetDatoCms } from "gatsby-source-datocms"
 import Logo from "../assets/lederhusetlogo.svg"
 import "../styles/index.sass"
-import Footer from '../components/Sections/Footer/footer'
+import Footer from "../components/Sections/Footer/footer"
+import Menu from '../components/Sections/menu'
 
 const TemplateWrapper = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false)
@@ -58,25 +59,7 @@ const TemplateWrapper = ({ children }) => {
                 </Link>
               </div>
               <div />
-              <ul className='navbar__menu'>
-                <li>
-                  <Link to='/om-oss'>Om Oss</Link>
-                </li>
-                <li>
-                  <Link to='/tjenester'>Tjenester</Link>
-                </li>
-                <li>
-                  <Link to='/nyheter'>Nyheter</Link>
-                </li>
-                <li>
-                  <Link to='/ledige-stillinger'>Ledige stillinger</Link>
-                </li>
-                <li>
-                  <Link className='navbar__konakt-btn' to='/kontakt-oss'>
-                    Kontakt oss
-                  </Link>
-                </li>
-              </ul>
+              <Menu />
             </div>
           </div>
           <div className='container__body'>
@@ -98,7 +81,7 @@ const TemplateWrapper = ({ children }) => {
               </div>
             </div>
             {children}
-            <Footer/>
+            <Footer />
           </div>
         </div>
       )}
