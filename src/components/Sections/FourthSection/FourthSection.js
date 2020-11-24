@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 export default function FourthSection() {
   return (
     <StaticQuery
@@ -39,6 +39,9 @@ export default function FourthSection() {
                 </li>
               )
             )}
+            <Link className='employess__CTABtn' to='/for-ansatte'>
+              FOR ANSATTE
+            </Link>
           </ul>
           <ul className='container__employess__List'>
             <h2 className='employess__title'>For companies</h2>
@@ -54,6 +57,9 @@ export default function FourthSection() {
                 </li>
               )
             )}
+            <Link className='employess__CTABtn' to='/'>
+              FOR SELSKAPER
+            </Link>
           </ul>
         </div>
       )}

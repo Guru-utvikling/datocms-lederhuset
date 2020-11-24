@@ -18,7 +18,7 @@ exports.createPages = ({ graphql, actions }) => {
     `).then(result => {
       result.data.allDatoCmsWork.edges.map(({ node: work }) => {
         createPage({
-          path: `works/${work.slug}`,
+          path: `nyheter/${work.slug}`,
           component: path.resolve(`./src/templates/blog.js`),
           context: {
             slug: work.slug,

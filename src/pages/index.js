@@ -5,7 +5,9 @@ import FirstSection from "../components/Sections/FirstSection/FirstSection"
 import SecondSection from '../components/Sections/SecondSection/SecondSection'
 import ThirdSection from '../components/Sections/Third Section/ThirdSection'
 import FourthSection from "../components/Sections/FourthSection/FourthSection"
-
+import FifthSection from '../components/Sections/Fifth Section/FifthSection'
+import SixthSection from '../components/Sections/Sixth Section/SixthSection'
+import ArticlesPreview from "../components/Sections/Sixth Section/ArticlePreview"
 const IndexPage = ({ data }) => (
   <Layout>
     <main className="container__main">
@@ -13,6 +15,9 @@ const IndexPage = ({ data }) => (
       <SecondSection/>
       <ThirdSection/>
       <FourthSection />
+      <FifthSection />
+      <SixthSection />
+      <ArticlesPreview />
     </main>
   </Layout>
 )
