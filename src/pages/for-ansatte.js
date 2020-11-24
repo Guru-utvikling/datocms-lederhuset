@@ -1,6 +1,6 @@
 import React, {useEffect,useState} from 'react'
 import Layout from '../components/layout'
-import {getAllActiveJobs} from '../pages/api/apiHandler'
+import {getAllActiveJobs} from '../components/api/apiHandler'
 
 const ForAnsatte = () => {
 const [activeJobs, setActiveJobs ] = useState()

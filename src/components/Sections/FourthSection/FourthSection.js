@@ -25,7 +25,8 @@ export default function FourthSection() {
       `}
       render={(data) => (
         <div className='container__employess'>
-          <ul className='container__employess--list'>
+          <ul className='container__employess__List'>
+            <h2 className='employess__title'>For employees</h2>
             {data.allDatoCmsEmployeesListSection.edges.map(
               ({ node: employees_list_section }) => (
                 <li
@@ -40,7 +41,7 @@ export default function FourthSection() {
             )}
           </ul>
           <ul className='container__employess__List'>
-
+            <h2 className='employess__title'>For companies</h2>
             {data.allDatoCmsCompaniesListSection.edges.map(
               ({ node: employees_list_section }) => (
                 <li
