@@ -59,6 +59,7 @@ const TemplateWrapper = ({ children }) => {
                 </Link>
               </div>
               <div />
+              <Link to="/account">Go to your account</Link>
               <Menu />
             </div>
           </div>

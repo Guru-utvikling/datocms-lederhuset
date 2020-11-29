@@ -7,8 +7,6 @@ const ForAnsatte = () => {
   const init = () => {
     getAllActiveJobs().then((data) => {
       setActiveJobs(data)
-      
-
     })
   }
 
@@ -19,23 +17,23 @@ const ForAnsatte = () => {
 
   const showActiveJobs = () => {
     if (activeJobs) {
-      Object.keys(activeJobs.data).forEach((e) => {
-        return(
-          <div className="" key={activeJobs.data.jobId}>
-            <h1>{activeJobs.data.name}</h1>
+      Object.keys(activeJobs.data).map((item) => {
+        return (
+          <div className="container__job" key={activeJobs.data[item].jobId}>
+            {activeJobs.data[item].candidateId}
           </div>
         )
       })
+    } else {
+      return <h1> Error please try later</h1>
     }
   }
 
-  return <Layout>{}</Layout>
+  return <Layout>{showActiveJobs}</Layout>
 }
-
-export default ForAnsatte
-
 /*      {activeJobs.data
         ? Object.keys(activeJobs.data).forEach((item) => {
             return <div key={item.name}>{item.name}</div>
           })
         : "Loading..."}  );*/
+export default ForAnsatte
