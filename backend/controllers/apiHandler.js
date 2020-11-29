@@ -15,6 +15,39 @@ exports.getAllActiveJobs = (req, res) => {
         .catch(err => console.log(err));
 }
 
-exports.registerCV = (req,res) =>{
+/*exports.registerCV = (req,res,firstName,lastName,email,gender,dob) =>{
 
-}
+    const requestOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          key: process.env.REACT_API_RE_KEY,
+          scope: "candidate",
+          operation: "insert",
+          data: {
+            firstName: "Damian ",
+            lastName: "Kursa",
+            email: "damian@guru-utvikling.no",
+            gender: "male",
+            dob: "1900-12-1",
+          },
+        }),
+      }
+      fetch("https://api.recman.no/v2/post/", requestOptions)
+        .then(async (response) => {
+          const data = await response.json()
+      
+          // check for error response
+          if (!response.ok) {
+            // get error message from body or default to response status
+            const error = (data && data.message) || response.status
+            return Promise.reject(error)
+          }
+      
+          this.setState({ postId: data.id })
+        })
+        .catch((error) => {
+          this.setState({ errorMessage: error.toString() })
+          console.error("There was an error!", error)
+        })
+} */

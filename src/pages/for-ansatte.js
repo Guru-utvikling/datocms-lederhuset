@@ -1,9 +1,21 @@
 import React, { useEffect, useState } from "react"
 import Layout from "../components/layout"
-import { getAllActiveJobs } from "../../backend/controllers/apiHandler"
 
 const ForAnsatte = () => {
   const [activeJobs, setActiveJobs] = useState()
+
+  const getAllActiveJobs = (req, res) => {
+    const proxyurl = "https://cors-anywhere.herokuapp.com/"
+    const url =`https://api.recman.no/v2/get/?key=${process.env.GATSBY_API_KEY}&scope=job&fields=name,startDate,endDate,salary`
+
+    return fetch(proxyurl + url, {
+      method: "GET",
+    })
+      .then((res) => {
+        return res.json()
+      })
+      .catch((err) => console.log(err))
+  }
   const init = () => {
     getAllActiveJobs().then((data) => {
       setActiveJobs(data)
@@ -19,7 +31,7 @@ const ForAnsatte = () => {
     if (activeJobs) {
       Object.keys(activeJobs.data).map((item) => {
         return (
-          <div className="container__job" key={activeJobs.data[item].jobId}>
+          <div className='container__job' key={activeJobs.data[item].jobId}>
             {activeJobs.data[item].candidateId}
           </div>
         )

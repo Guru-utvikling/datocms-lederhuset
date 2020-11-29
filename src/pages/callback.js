@@ -5,7 +5,11 @@ import { handleAuthentication } from "../utils/auth"
 const Callback = () => {
   handleAuthentication()
 
-  return <p>Loading...</p>
+  return (
+    <div className="container__callback">
+      <h1 class>Loading...</h1>
+    </div>
+  )
 }
 
 export default Callback
