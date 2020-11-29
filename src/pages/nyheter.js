@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 
 const NyheterPage = ({ data }) => (
   <Layout>
+    <h1>Nyheter</h1>
   <Masonry className='showcase'>
       {data.allDatoCmsWork.edges.map(({ node: work }) => (
         <div key={work.id} className='showcase__item'>
