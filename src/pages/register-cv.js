@@ -1,11 +1,11 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import Layout from "../components/layout"
+import Form from '../components/form'
 
 const RegisterCV = () => {
-const [ error , setError ] = useState()
-const [ data, setData] = useState()
-  const submmitYourCV =()=>{
-
+  const [error, setError] = useState()
+  const [data, setData] = useState()
+  const submmitYourCV = () => {
     const requestOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -14,7 +14,7 @@ const [ data, setData] = useState()
         scope: "candidate",
         operation: "insert",
         data: {
-          corporationId:'1016',
+          corporationId: "1016",
           firstName: "Damian ",
           lastName: "Kursa",
         },
@@ -33,7 +33,7 @@ const [ data, setData] = useState()
           const error = (data && data.message) || response.status
           return Promise.reject(error)
         }
-    
+
         setData({ postId: data.id })
       })
       .catch((error) => {
@@ -43,7 +43,11 @@ const [ data, setData] = useState()
   }
   return (
     <Layout>
-      <button onClick={submmitYourCV}>Register</button>
+      <div className='container__registerCV'>
+
+        <Form/>
+        <button onClick={submmitYourCV}>Register</button>
+      </div>
     </Layout>
   )
 }
