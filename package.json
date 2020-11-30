@@ -17,6 +17,7 @@
     "gatsby-source-datocms": "^2.2.4",
     "gatsby-source-filesystem": "^2.3.35",
     "gatsby-transformer-remark": "^2.8.43",
+    "material-ui-phone-number": "^2.2.6",
     "material-ui-search-bar": "^1.0.0",
     "node-sass": "^4.13.0",
     "react": "^16.14.0",

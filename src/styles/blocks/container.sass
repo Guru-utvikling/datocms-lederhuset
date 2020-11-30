@@ -1,7 +1,8 @@
 @media screen and (max-width: 899px)
   //RegisterCV
   .container__registerCV
-    height: 90vh
+    height: auto
+    max-width: 100%
     display: flex
     flex-direction: column
     justify-content: center
@@ -9,6 +10,18 @@
     background-image: url('https://www.datocms-assets.com/37833/1606722782-bgspring2016.jpg')
     background-size: cover
     background-position: center center
+  .container__regiser_cv_form
+    max-width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    margin: 1rem
+    padding-bottom: 1rem
+    background-color: rgba( 255,255,255,.8 )
+  .container__input__fields,.container__input__fields--down
+    max-width: 80%
+
   //Footer
   .container__footer
     display: flex
@@ -305,7 +318,7 @@
   .container__footer
     display: flex
     flex-direction: column
-    width: 100%
+    max-width: 100%
     justify-content: center
     align-items: center
     padding: 2rem
@@ -380,7 +393,8 @@
       font-weight: 600
       margin: 2rem
   .container__registerCV
-    height: 90vh
+    height: auto
+    padding: 5rem
     display: flex
     flex-direction: column
     justify-content: center
@@ -398,3 +412,6 @@
     padding: 5rem
   .container__input__fields
     width: 100%
+  .container__input__fields--down
+    width: 80%
+    margin-top: 2rem
