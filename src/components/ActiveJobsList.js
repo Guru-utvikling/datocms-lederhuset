@@ -2,7 +2,7 @@ import React from "react"
 import Masonry from "react-masonry-component"
 const ActiveJobsList = (props) => {
   return (
-    <div className='showcase'>
+    <Masonry className='showcase'>
       {Object.keys(props.activelist.data).map((item) => {
         return (
           <div key={props.activelist.data[item]} className='showcase__item'>
@@ -20,15 +20,8 @@ const ActiveJobsList = (props) => {
           </div>
         )
       })}
-    </div>
+    </Masonry>
   )
 }
 
 export default ActiveJobsList
-/*
-        
-
-
-
-
-*/

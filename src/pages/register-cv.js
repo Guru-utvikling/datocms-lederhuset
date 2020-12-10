@@ -119,7 +119,7 @@ const RegisterCV = () => {
         />
       </div>
       <div className='container__input__fields'>
-        <MuiPhoneNumber
+       {/* <MuiPhoneNumber
           id='phone'
           label='Mobiltelefon'
           variant='outlined'
@@ -127,7 +127,7 @@ const RegisterCV = () => {
           value={state.phone}
           onChange={(e) => handleChange("phone", e.target)}
           style={{ margin: 8, width: "100%" }}
-        />
+  /> */}
         <TextField
           id='email'
           label='E-post'

@@ -6,8 +6,8 @@ import Layout from "../components/layout"
 
 const NyheterPage = ({ data }) => (
   <Layout>
-    <h1 className="nyheter__title">Nyheter</h1>
-  <Masonry className='showcase'>
+    <h1 className='nyheter__title'>Nyheter</h1>
+    <Masonry className='showcase'>
       {data.allDatoCmsWork.edges.map(({ node: work }) => (
         <div key={work.id} className='showcase__item'>
           <figure className='card'>
@@ -25,7 +25,7 @@ const NyheterPage = ({ data }) => (
           </figure>
         </div>
       ))}
-      </Masonry>
+    </Masonry>
   </Layout>
 )
 
@@ -49,4 +49,4 @@ export const query = graphql`
       }
     }
   }
-` 
+`
