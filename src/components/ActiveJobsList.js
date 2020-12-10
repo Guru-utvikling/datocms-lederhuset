@@ -2,7 +2,7 @@ import React from "react"
 import Masonry from "react-masonry-component"
 const ActiveJobsList = (props) => {
   return (
-    <Masonry className='showcase'>
+    <div className='showcase'>
       {Object.keys(props.activelist.data).map((item) => {
         return (
           <div key={props.activelist.data[item]} className='showcase__item'>
@@ -20,7 +20,7 @@ const ActiveJobsList = (props) => {
           </div>
         )
       })}
-    </Masonry>
+    </div>
   )
 }
 
