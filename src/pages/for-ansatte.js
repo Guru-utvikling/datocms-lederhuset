@@ -19,6 +19,7 @@ const ForAnsatte = () => {
   const init = () => {
     getAllActiveJobs().then((data) => {
       setActiveJobs(data)
+      
     })
   }
 
@@ -41,7 +42,7 @@ const ForAnsatte = () => {
     }
   }
 
-  return <Layout>{showActiveJobs}</Layout>
+return <Layout>{showActiveJobs}{console.log(activeJobs)}</Layout>
 }
 /*      {activeJobs.data
         ? Object.keys(activeJobs.data).forEach((item) => {
