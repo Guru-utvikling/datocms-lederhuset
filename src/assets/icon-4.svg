@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="141" height="141" viewBox="0 0 141 141">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_15" data-name="Ellipse 15" cx="50" cy="50" r="50" transform="translate(1120 1686)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_52" data-name="Group 52" transform="translate(-1099 -1665)">
+    <circle id="Ellipse_14" data-name="Ellipse 14" cx="70.5" cy="70.5" r="70.5" transform="translate(1099 1665)" fill="#a08629"/>
+    <g id="Mask_Group_7" data-name="Mask Group 7" clip-path="url(#clip-path)">
+      <g id="fired" transform="translate(1120 1686)">
+        <path id="Path_51" data-name="Path 51" d="M83.489,39.122,75.4,27.88a9.876,9.876,0,0,0-7.275-3.7h-3a13.033,13.033,0,1,0-13.654,0H20.489c-2.877,0-5.218,1.8-5.218,4.158S17.612,32.5,20.489,32.5H44.813V58.608a4.822,4.822,0,0,0,3.237,4.5L48.113,90.8a8.266,8.266,0,0,0,8.313,8.215h3.758A8.244,8.244,0,0,0,68.472,90.8L68.5,63.079a4.773,4.773,0,0,0,2.849-2.722A9.221,9.221,0,0,0,77.6,56.506l6.09-9.439A7.508,7.508,0,0,0,83.489,39.122Zm-9.1,7.411-2.878,3.936V38.514L74.2,41.793A4.285,4.285,0,0,1,74.387,46.533Z" fill="#fff"/>
+        <path id="Path_52" data-name="Path 52" d="M29.642,87.826a6.087,6.087,0,1,0,6.087,6.087A6.094,6.094,0,0,0,29.642,87.826Z" fill="#fff"/>
+        <path id="Path_53" data-name="Path 53" d="M33.785,40.374H25.914a5.312,5.312,0,0,0-3.942,1.7,5.385,5.385,0,0,0-1.41,4.132L23.84,80.638H35.859l3.28-34.452a5.371,5.371,0,0,0-1.412-4.108A5.311,5.311,0,0,0,33.785,40.374Z" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
