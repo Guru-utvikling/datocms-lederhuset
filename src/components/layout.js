@@ -47,10 +47,10 @@ const TemplateWrapper = ({ children }) => {
       `}
       render={(data) => (
         <div className={`container ${showMenu ? "is-open" : ""}`}>
-          <HelmetDatoCms
+          {/*<HelmetDatoCms
             favicon={data.datoCmsSite.faviconMetaTags}
             seo={data.datoCmsHome.seoMetaTags}
-          />
+          /> */}
           <div className='container__navbar'>
             <div className='navbar'>
               <div className='navbar__logo'>
