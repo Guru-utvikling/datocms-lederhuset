@@ -12,40 +12,8 @@ import Menu from '../components/Sections/menu'
 
 const TemplateWrapper = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false)
+  
   return (
-    <StaticQuery
-      query={graphql`
-        query LayoutQuery {
-          datoCmsSite {
-            globalSeo {
-              siteName
-            }
-            faviconMetaTags {
-              ...GatsbyDatoCmsFaviconMetaTags
-            }
-          }
-          datoCmsHome {
-            seoMetaTags {
-              ...GatsbyDatoCmsSeoMetaTags
-            }
-            introTextNode {
-              childMarkdownRemark {
-                html
-              }
-            }
-            copyright
-          }
-          allDatoCmsSocialProfile(sort: { fields: [position], order: ASC }) {
-            edges {
-              node {
-                profileType
-                url
-              }
-            }
-          }
-        }
-      `}
-      render={(data) => (
         <div className={`container ${showMenu ? "is-open" : ""}`}>
           {/*<HelmetDatoCms
             favicon={data.datoCmsSite.faviconMetaTags}
@@ -86,8 +54,6 @@ const TemplateWrapper = ({ children }) => {
             <Footer />
           </div>
         </div>
-      )}
-    />
   )
 }
 
@@ -97,3 +63,38 @@ TemplateWrapper.propTypes = {
 
 export default TemplateWrapper
 /* eslint-enable jsx-a11y/anchor-has-content, jsx-a11y/anchor-is-valid*/
+
+
+/*<StaticQuery
+query={graphql`
+  query LayoutQuery {
+    datoCmsSite {
+      globalSeo {
+        siteName
+      }
+      faviconMetaTags {
+        ...GatsbyDatoCmsFaviconMetaTags
+      }
+    }
+    datoCmsHome {
+      seoMetaTags {
+        ...GatsbyDatoCmsSeoMetaTags
+      }
+      introTextNode {
+        childMarkdownRemark {
+          html
+        }
+      }
+      copyright
+    }
+    allDatoCmsSocialProfile(sort: { fields: [position], order: ASC }) {
+      edges {
+        node {
+          profileType
+          url
+        }
+      }
+    }
+  }
+`}
+render={(data) => ( */
