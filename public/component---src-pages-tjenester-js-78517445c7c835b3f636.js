@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{"2f6O":function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),l=t.n(a),r=t("Bl7J");n.default=function(){return l.a.createElement(r.a,null,l.a.createElement("div",null,l.a.createElement("h1",null," Sorry, nothing to see here yet")))}}}]);
+//# sourceMappingURL=component---src-pages-tjenester-js-78517445c7c835b3f636.js.map

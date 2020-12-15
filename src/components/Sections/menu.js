@@ -8,7 +8,13 @@ const Menu = () => {
         <Link to='/om-oss'>Om Oss</Link>
       </li>
       <li>
-        <Link to='/tjenester'>Tjenester</Link>
+        <Link class="dropdown">Tjenester</Link>
+          <ul className="dropdown__list">
+            <Link>Rekruttering</Link>
+            <Link>Lederutvikling</Link>
+            <Link>Mentoring</Link>
+            <Link>Omstilling/nedbemanning</Link>
+          </ul>
       </li>
       <li>
         <Link to='/nyheter'>Nyheter</Link>

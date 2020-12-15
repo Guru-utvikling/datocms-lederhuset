@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[17],{NaCN:function(e,t,n){"use strict";n.r(t),n.d(t,"query",(function(){return l}));var a=n("q1tI"),r=n.n(a),c=n("Bl7J");t.default=function(e){var t=e.data;return r.a.createElement(c.a,null,r.a.createElement("h1",null,t.datoCmsServicePage.title),r.a.createElement("p",null,t.datoCmsServicePage.content))};var l="2661539315"}}]);
+//# sourceMappingURL=component---src-templates-services-js-c02a091778a4d20cbae0.js.map

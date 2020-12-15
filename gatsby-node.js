@@ -15,7 +15,7 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-    `).then(result => {
+    `).then((result) => {
       result.data.allDatoCmsWork.edges.map(({ node: work }) => {
         createPage({
           path: `nyheter/${work.slug}`,
@@ -29,7 +29,36 @@ exports.createPages = ({ graphql, actions }) => {
     })
   })
 }
-/*exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  return new Promise((resolve, reject) => {
+    graphql(`
+      {
+        allDatoCmsServicePage {
+          edges {
+            node {
+              slug
+            }
+          }
+        }
+      }
+    `).then(result => {
+     result.data.allDatoCmsServicePage.edges.map(({ node: service_page }) => {
+        createPage({
+          path: `servicepages/${service_page.slug}`,
+          component: path.resolve(`./src/templates/services.js`),
+          context: {
+            slug: service_page.slug,
+          },
+        })
+      })
+      resolve()
+    })
+  })
+} 
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === "build-html") {
     actions.setWebpackConfig({
       module: {
@@ -42,4 +71,4 @@ exports.createPages = ({ graphql, actions }) => {
       },
     })
   }
-} */
+}

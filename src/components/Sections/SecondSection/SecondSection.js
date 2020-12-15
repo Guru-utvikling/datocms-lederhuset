@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql,Link } from "gatsby"
 export default function SecondSection() {
   return (
     <StaticQuery
@@ -11,6 +11,7 @@ export default function SecondSection() {
                 description
                 id
                 title
+                slug
                 icon {
                   url
                 }
@@ -29,6 +30,7 @@ export default function SecondSection() {
               <div className='container__servicebox--content'>
                 <h1 className='servicebox__content--title'>{service_box.title}</h1>
                 <p className='servicebox__content--para'>{service_box.description}</p>
+                <Link to={`servicepages/${service_box.slug}`}>Les mer</Link>
               </div>
             </div>
           ))}

@@ -7,7 +7,7 @@ const FifthSection = () => {
         <img src='https://www.datocms-assets.com/37833/1606210127-why-us-bg-2x.png' />
       </div>
       <div className='container__why-us--content'>
-        <h2 className='employess__title'>Why us ?</h2>
+        <h2 className='employess__title'>Hvem er vi</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever

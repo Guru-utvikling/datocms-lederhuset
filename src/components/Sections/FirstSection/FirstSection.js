@@ -12,14 +12,6 @@ const FirstSection = () => {
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book.
         </p>
-        <div className="container__CTABtn">
-          <Link className='header__CTABtn' to='/'>
-            FOR SELSKAPER
-          </Link>
-          <Link className='header__CTABtn' to='/for-ansatte'>
-            FOR ANSATTE
-          </Link>
-        </div>
       </div>
       <div className='container__header--right'></div>
     </div>

@@ -27,8 +27,6 @@ const TemplateWrapper = ({ children }) => {
                 </Link>
               </div>
               <div />
-              <Link to="/register-cv">Register your CV</Link>
-              <Link to="/account">Go to your account</Link>
               <Menu />
             </div>
           </div>

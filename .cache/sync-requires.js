@@ -16,6 +16,6 @@ exports.components = {
   "component---src-pages-om-oss-js": hot(preferDefault(require("/Users/damiankursa/Desktop/LederhusetDato/src/pages/om-oss.js"))),
   "component---src-pages-register-cv-js": hot(preferDefault(require("/Users/damiankursa/Desktop/LederhusetDato/src/pages/register-cv.js"))),
   "component---src-pages-tjenester-js": hot(preferDefault(require("/Users/damiankursa/Desktop/LederhusetDato/src/pages/tjenester.js"))),
-  "component---src-templates-blog-js": hot(preferDefault(require("/Users/damiankursa/Desktop/LederhusetDato/src/templates/blog.js")))
+  "component---src-templates-services-js": hot(preferDefault(require("/Users/damiankursa/Desktop/LederhusetDato/src/templates/services.js")))
 }
 

@@ -1,62 +1,36 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 export default function FourthSection() {
-  const data = useStaticQuery(graphql`
-    query MyQuery {
-      allDatoCmsCompaniesListSection {
-        edges {
-          node {
-            id
-            content
-          }
-        }
-      }
-      allDatoCmsEmployeesListSection {
-        edges {
-          node {
-            content
-            id
-          }
-        }
-      }
-    }
-  `)
   return (
     <div className='container__employess'>
       <ul className='container__employess__List'>
-        <h2 className='employess__title'>For employees</h2>
-        {data.allDatoCmsEmployeesListSection.edges.map(
-          ({ node: employees_list_section }) => (
-            <li
-              key={employees_list_section.id}
-              className='container__employessItem'
-            >
-              <p className='servicebox__content--para'>
-                {employees_list_section.content}
-              </p>
-            </li>
-          )
-        )}
+        <h2 className='employess__title'>Ønsker du hjelp til:</h2>
+        <li className='container__employessItem'>
+          <p className='servicebox__content--para'>Rekruttering</p>
+        </li>
+        <li className='container__employessItem'>
+          <p className='servicebox__content--para'>Lederutvikling</p>
+        </li>
+        <li className='container__employessItem'>
+          <p className='servicebox__content--para'>Mentoring</p>
+        </li>
+        <li className='container__employessItem'>
+          <p className='servicebox__content--para'>Omstilling nedbemanning</p>
+        </li>
         <Link className='employess__CTABtn' to='/for-ansatte'>
-          FOR ANSATTE
+          KONTAKT OSS
         </Link>
       </ul>
       <ul className='container__employess__List'>
-        <h2 className='employess__title'>For companies</h2>
-        {data.allDatoCmsCompaniesListSection.edges.map(
-          ({ node: employees_list_section }) => (
-            <li
-              key={employees_list_section.id}
-              className='container__employessItem'
-            >
-              <p className='servicebox__content--para'>
-                {employees_list_section.content}
-              </p>
-            </li>
-          )
-        )}
+        <h2 className='employess__title'>Søker du nye utfordringer?</h2>
+        <li className='container__employessItem'>
+          <p className='servicebox__content--para'>Rekruttering</p>
+        </li>
+        <li className='container__employessItem'>
+          <p className='servicebox__content--para'>Lederutvikling</p>
+        </li>
         <Link className='employess__CTABtn' to='/'>
-          FOR SELSKAPER
+          KONTAKT OSS
         </Link>
       </ul>
     </div>
