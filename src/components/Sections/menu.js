@@ -10,10 +10,10 @@ const Menu = () => {
       <li>
         <Link class="dropdown">Tjenester</Link>
           <ul className="dropdown__list">
-            <Link>Rekruttering</Link>
-            <Link>Lederutvikling</Link>
-            <Link>Mentoring</Link>
-            <Link>Omstilling/nedbemanning</Link>
+            <Link to="/servicepages/rekruttering">Rekruttering</Link>
+            <Link to="/servicepages/lederutvikling">Lederutvikling</Link>
+            <Link to="/servicepages/mentoring">Mentoring</Link>
+            <Link to="/servicepages/omstillingnedbemanning">Omstilling/nedbemanning</Link>
           </ul>
       </li>
       <li>

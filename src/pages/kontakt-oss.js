@@ -1,6 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from '../components/layout'
+import PlaceIcon from '@material-ui/icons/Place';
+import MailIcon from '@material-ui/icons/Mail';
+import PhoneIcon from '@material-ui/icons/Phone';
 const KontaktOss = () => {
   return (
     <Layout>
@@ -13,15 +16,17 @@ const KontaktOss = () => {
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book.
           </p>
-          <p>MAPA</p>
           <ul className='kontakt-oss__list'>
             <li className='kontakt-oss__list--item'>
+              <PlaceIcon style={{color:'#A08629'}}/>
               Halfdan Kjerulfsgate 4 5017 Bergen
             </li>
             <li className='kontakt-oss__list__item'>
+              <PhoneIcon style={{color:'#A08629'}}/>
               <Link to='tel:+47567875123'>(+47) 567 875 123</Link>
             </li>
             <li className='kontakt-oss__list--item'>
+              <MailIcon style={{color:'#A08629'}}/>
               <Link to='mailto:post@epost.no'>post@epost.no</Link>
             </li>
             <li className='kontakt-oss__list--item'></li>

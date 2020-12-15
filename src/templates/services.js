@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 export default ({ data }) => (
   <Layout>
     <div className='service_page__container'>
-      <img src={data.datoCmsServicePage.background.fluid.src} />
+      <img className='service_page__image' src={data.datoCmsServicePage.background.fluid.src} />
       <div className='service_page__content--wraper'>
         <h1 className='service_page__title'>{data.datoCmsServicePage.title}</h1>
         <p className='service_page__content'>

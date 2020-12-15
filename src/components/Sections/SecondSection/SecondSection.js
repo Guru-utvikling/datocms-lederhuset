@@ -35,7 +35,7 @@ export default function SecondSection() {
           <p className='servicebox__content--para'>
             {service_box.description}
           </p>
-          <Link to={`servicepages/${service_box.slug}`}>Les mer</Link>
+          <Link  className="servicebox__content--link" to={`servicepages/${service_box.slug}`}>Les mer</Link>
         </div>
       </div>
     ))}

@@ -3,7 +3,9 @@
   max-width: 100%
   overflow: hidden
   display: flex
-
+.service_page__image
+  max-width: 100%
+  height: auto
 .service_page__content--wraper
   justify-content: center
   display: flex
@@ -16,3 +18,13 @@
   font-size: 60px
   font-weight: 600
   color: #A08629
+
+@media screen and (max-width: 899px)
+  .service_page__container
+    flex-direction: column
+  .service_page__content--wraper
+    margin: 0
+    padding: 2rem
+  .service_page__title
+    font-size: 2rem
+    margin-bottom: 2rem
