@@ -4,8 +4,15 @@ import Layout from "../components/layout"
 
 export default ({ data }) => (
   <Layout>
-    <h1>{data.datoCmsServicePage.title}</h1>
-    <p>{data.datoCmsServicePage.content}</p>
+    <div className='service_page__container'>
+      <img src={data.datoCmsServicePage.background.fluid.src} />
+      <div className='service_page__content--wraper'>
+        <h1 className='service_page__title'>{data.datoCmsServicePage.title}</h1>
+        <p className='service_page__content'>
+          {data.datoCmsServicePage.content}
+        </p>
+      </div>
+    </div>
   </Layout>
 )
 
@@ -14,6 +21,11 @@ export const query = graphql`
     datoCmsServicePage(slug: { eq: $slug }) {
       title
       content
+      background {
+        fluid {
+          src
+        }
+      }
     }
   }
 `
