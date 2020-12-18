@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{iVOq:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),l=t.n(a),r=t("Bl7J");n.default=function(e){return l.a.createElement(r.a,null,l.a.createElement("div",null,l.a.createElement("h1",null," Sorry, nothing to see here yet")))}}}]);
-//# sourceMappingURL=component---src-pages-om-oss-js-e764b3593e7c448c0023.js.map

@@ -11,12 +11,12 @@ const FirstSection = () => {
           Det viktigste vi har i alle bedrifter er de ansatte. For at ansatte
           skal bidra og skape best mulig resultater er vi avhengig av å ha best
           mulig ledere.
-          <p>
-            Lederhuset bistår deg i å finne de best egnete lederne og
-            nøkkelpersonell til din bedrift.
-          </p>
-          <p>Og vi hjelper deg å utvikle både nye og eksisterende ledere</p>
         </p>
+        <p className='header__content'>
+          Lederhuset bistår deg i å finne de best egnete lederne og
+          nøkkelpersonell til din bedrift.
+        </p>
+        <p className='header__content'>Og vi hjelper deg å utvikle både nye og eksisterende ledere</p>
       </div>
       <div className='container__header--right'></div>
     </div>

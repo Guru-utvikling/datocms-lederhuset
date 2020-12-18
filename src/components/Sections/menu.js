@@ -21,8 +21,9 @@ const Navigation = () => {
       </li>
       <li onClick={handleClick}>
         <Link>
-          Tjenester <ExpandMoreIcon style={{ color: "#A08629" }} />
+          Tjenester
         </Link>
+        <ExpandMoreIcon width={16} height={16} style={{ color: "#A08629" }} />
 
         <Menu
           id='simple-menu'
