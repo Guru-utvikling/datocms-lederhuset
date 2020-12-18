@@ -36,7 +36,7 @@ const LedigeStillinger = () => {
   return (
     <Layout>
       <div>
-      {!dataIsLoading ? <ActiveJobList activelist={activeJobs}/> : <h1>Loading...</h1>}
+      {!dataIsLoading ? <ActiveJobList activelist={activeJobs}/> : <div className="loading-div"><h1>Loading...</h1></div>}
       </div>
 
     </Layout>

@@ -17,7 +17,7 @@ export default function FourthSection() {
         <li className='container__employessItem'>
           <p className='servicebox__content--para'>Omstilling nedbemanning</p>
         </li>
-        <Link className='employess__CTABtn' to='/for-ansatte'>
+        <Link className='employess__CTABtn' to='/kontakt-oss'>
           KONTAKT OSS
         </Link>
       </ul>
@@ -29,7 +29,7 @@ export default function FourthSection() {
         <li className='container__employessItem'>
           <p className='servicebox__content--para'>Lederutvikling</p>
         </li>
-        <Link className='employess__CTABtn' to='/'>
+        <Link className='employess__CTABtn' to='/kontakt-oss'>
           KONTAKT OSS
         </Link>
       </ul>

@@ -1,0 +1,36 @@
+.omOss__container
+  min-height: 550px
+  max-width: 100%
+  overflow: hidden
+  display: flex
+  flex-direction: row
+.omOss__image
+  width: 50%
+  height: auto
+.omOss__content--wraper
+  width: 50%
+  max-width: 100%
+  justify-content: center
+  display: flex
+  flex-direction: column
+  padding: 5rem
+  background-color: #F2EEE1
+.omOss__title
+  font-size: 60px
+  font-weight: 600
+  color: #A08629
+
+@media screen and (max-width: 899px)
+  .omOss__container
+    flex-direction: column
+    width: 100%
+  .omOss__content--wraper
+    margin: 0
+    width: 100%
+    padding: 1rem 1rem
+    text-align: center
+  .omOss__title
+    font-size: 2rem
+    margin-bottom: 2rem
+  .omOss__image
+    width: 100%
