@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 export default function SecondSection() {
+  
   const data = useStaticQuery(graphql`
     query ServiceBox {
       allDatoCmsServiceBox {

@@ -4,13 +4,18 @@ const FirstSection = () => {
   return (
     <div className='container__section1'>
       <div className='container__header--left'>
-        <h1 className='header__title'>Your business
-        is our business</h1>
+        <h1 className='header__title'>
+          Lederhuset skal være en ressurs for deg og din bedrift
+        </h1>
         <p className='header__content'>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
+          Det viktigste vi har i alle bedrifter er de ansatte. For at ansatte
+          skal bidra og skape best mulig resultater er vi avhengig av å ha best
+          mulig ledere.
+          <p>
+            Lederhuset bistår deg i å finne de best egnete lederne og
+            nøkkelpersonell til din bedrift.
+          </p>
+          <p>Og vi hjelper deg å utvikle både nye og eksisterende ledere</p>
         </p>
       </div>
       <div className='container__header--right'></div>

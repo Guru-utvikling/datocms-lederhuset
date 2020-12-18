@@ -23,7 +23,7 @@ const TemplateWrapper = ({ children }) => {
             <div className='navbar'>
               <div className='navbar__logo'>
                 <Link to='/'>
-                  <img width={255} height={53} src={Logo}></img>
+                  <img width={462} height={96} src={Logo}></img>
                 </Link>
               </div>
               <div />
