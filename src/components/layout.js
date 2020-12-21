@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 import { StaticQuery, graphql } from "gatsby"
 import { HelmetDatoCms } from "gatsby-source-datocms"
 import Logo from "../assets/lederhusetlogo.svg"
-import "../styles/index.sass"
+import "../styles/index.scss"
 import Footer from "../components/Sections/Footer/footer"
 import Menu from '../components/Sections/menu'
 
