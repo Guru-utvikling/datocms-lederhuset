@@ -7,24 +7,35 @@
   width: 100%
   height: auto
 .service_page__content--wraper
+  box-sizing: content-box
   justify-content: center
   display: flex
   flex-direction: column
   padding: 2rem
   background-color: #F2EEE1
-  margin: 10rem 10rem 10rem -15rem
   padding: 5rem
+  width: 50%
 .service_page__title
   font-size: 60px
   font-weight: 600
   color: #A08629
+.image-wrapper
+  width: 50%
+.service_page__content
+  display: flex
 
 @media screen and (max-width: 899px)
   .service_page__container
     flex-direction: column
   .service_page__content--wraper
+    box-sizing: content-box
     margin: 0
     padding: 2rem
+    width: 80%
+    justify-content: center
+    display: flex
   .service_page__title
     font-size: 2rem
     margin-bottom: 2rem
+  .image-wrapper
+    width: 100%
