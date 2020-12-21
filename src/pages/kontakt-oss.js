@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
-import Layout from '../components/layout'
-import PlaceIcon from '@material-ui/icons/Place';
-import MailIcon from '@material-ui/icons/Mail';
-import PhoneIcon from '@material-ui/icons/Phone';
+import Layout from "../components/layout"
+import PlaceIcon from "@material-ui/icons/Place"
+import MailIcon from "@material-ui/icons/Mail"
+import PhoneIcon from "@material-ui/icons/Phone"
 const KontaktOss = () => {
   return (
     <Layout>
@@ -18,24 +18,58 @@ const KontaktOss = () => {
           </p>
           <ul className='kontakt-oss__list'>
             <li className='kontakt-oss__list--item'>
-              <PlaceIcon style={{color:'#A08629'}}/>
+              <PlaceIcon style={{ color: "#A08629", marginRight: "1rem" }} />
               Halfdan Kjerulfsgate 4 5017 Bergen
             </li>
             <li className='kontakt-oss__list__item'>
-              <PhoneIcon style={{color:'#A08629'}}/>
+              <PhoneIcon style={{ color: "#A08629", marginRight: "1rem" }} />
               <Link to='tel:+47567875123'>(+47) 567 875 123</Link>
             </li>
             <li className='kontakt-oss__list--item'>
-              <MailIcon style={{color:'#A08629'}}/>
+              <MailIcon style={{ color: "#A08629", marginRight: "1rem" }} />
               <Link to='mailto:post@epost.no'>post@epost.no</Link>
             </li>
             <li className='kontakt-oss__list--item'></li>
           </ul>
         </div>
         <div className='container__kontakt-oss--form'>
-          <form>
-            <label>1</label>
-            <input/>
+          <form className='kontakt-oss--form' method='post' action='#'>
+            <label>
+              <input placeholder='Navn*' type='text' name='name' id='name' />
+            </label>
+            <label>
+              <input
+                placeholder='Telefon*'
+                type='text'
+                name='subject'
+                id='subject'
+              />
+            </label>
+            <label>
+              <input
+                placeholder='E-post*'
+                type='email'
+                name='email'
+                id='email'
+              />
+            </label>
+            <label>
+              <input
+                placeholder='Firma (Company)'
+                type='text'
+                name='subject'
+                id='subject'
+              />
+            </label>
+            <label>
+              <textarea
+                placeholder='Melding'
+                name='message'
+                id='message'
+                rows='5'
+              />
+            </label>
+            <button className="submit-btn-form" type='submit'>Kontakt oss</button>
           </form>
         </div>
       </div>
