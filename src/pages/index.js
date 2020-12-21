@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => (
   <Layout>
     <main className='container__main'>
       <FirstSection />
-      <SecondSection />
+      {/*<SecondSection />*/}
       <ThirdSection />
       <FourthSection />
       <FifthSection />
