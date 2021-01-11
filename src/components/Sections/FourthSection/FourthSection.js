@@ -29,9 +29,6 @@ export default function FourthSection() {
         <li className='container__employessItem'>
           <p className='servicebox__content--para'>Lederutvikling</p>
         </li>
-        <Link className='employess__CTABtn' to='/kontakt-oss'>
-          KONTAKT OSS
-        </Link>
       </ul>
     </div>
   )

@@ -71,9 +71,27 @@
   color: $light-body-color
   font-size: 13px
 
+.container__navbar
+  display: flex
+  flex-direction: row
+
+  box-sizing: border-box
+  padding: 25px
+  background-color: $light-bg-color
+  -webkit-box-shadow: 0px 10px 5px -1px rgba(0,0,0,0.04)
+  -moz-box-shadow: 0px 10px 5px -1px rgba(0,0,0,0.04)
+  box-shadow: 0px 10px 5px -1px rgba(0,0,0,0.04)
+
+@media screen and (min-width: 900px) and (max-width: 1208px)
+  .navbar__logo
+    width: 35%
+  .navbar
+    padding: 0 1rem
+
 @media screen and (max-width: 899px)
   .navbar
     padding: 0 0
+    justify-content: start
   .navbar__menu,.navbar
     flex-direction: column
   .navbar__konakt-btn
@@ -85,3 +103,20 @@
       font-size: 18px
   .navbar__logo
     display: none
+
+  .container__navbar
+    box-sizing: border-box
+    position: fixed
+    width: 200px
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 2
+    transform: translate3d(-200px, 0, 0)
+    transition: transform 0.2s ease-in-out
+    padding: 20px
+    background-color: $light-body-color
+
+    .container.is-open &
+      transform: translate3d(0px, 0, 0)
