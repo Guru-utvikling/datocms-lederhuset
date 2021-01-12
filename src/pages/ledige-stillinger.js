@@ -6,7 +6,9 @@ const LedigeStillinger = () => {
   const [dataIsLoading, setDataIsLoading] = useState(true)
 
   const getAllActiveJobs = (req, res) => {
-    const url = `https://api.recman.no/v2/get/?key=${process.env.GATSBY_API_KEY}&scope=job&fields=name,startDate,endDate,salary`
+    const proxy = "https://cors-anywhere.herokuapp.com/"
+    const api = `https://api.recman.no/v2/get/?key=${process.env.GATSBY_API_KEY}&scope=job&fields=name,startDate,endDate,salary`
+    const url =  proxy + api
 
     return fetch( url, {
       method: "GET",
