@@ -8,7 +8,7 @@ import FourthSection from "../components/Sections/FourthSection/FourthSection"
 import FifthSection from "../components/Sections/Fifth Section/FifthSection"
 import SixthSection from "../components/Sections/Sixth Section/SixthSection"
 import ArticlesPreview from "../components/Sections/Sixth Section/ArticlePreview"
-const IndexPage = ({ data }) => (
+const IndexPage = ({data}) => (
   <Layout>
     <main className='container__main'>
       <FirstSection />
@@ -18,8 +18,29 @@ const IndexPage = ({ data }) => (
       <FifthSection />
       <SixthSection />
       <ArticlesPreview />
+
     </main>
   </Layout>
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query ArticlesPreview {
+    allDatoCmsWork {
+      edges {
+        node {
+          id
+          title
+          slug
+          coverImage {
+            fluid {
+              src
+            }
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`

@@ -1,63 +1,54 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
+  
+  const nyheters = await graphql(`
+  {
+    allDatoCmsNyheter {
+      edges {
+        node {
+          slug
+        }
+      }
+    }
+  }
+  `).then((res) => res.data)
 
-  return new Promise((resolve, reject) => {
-    graphql(`
-      {
-        allDatoCmsWork {
-          edges {
-            node {
-              slug
-            }
+  nyheters.allDatoCmsNyheter.edges.forEach(({ node: nyheter }) => {
+    createPage({
+      path: `nyheters/${nyheter.slug}`,
+      component: path.resolve(`./src/templates/nyheters.js`),
+      context: {
+        slug: nyheter.slug,
+      },
+    })
+  })
+
+  const servicePages = await graphql(`
+    {
+      allDatoCmsServicePage {
+        edges {
+          node {
+            slug
           }
         }
       }
-    `).then((result) => {
-      result.data.allDatoCmsWork.edges.map(({ node: work }) => {
-        createPage({
-          path: `nyheter/${work.slug}`,
-          component: path.resolve(`./src/templates/blog.js`),
-          context: {
-            slug: work.slug,
-          },
-        })
-      })
-      resolve()
+    }
+  `).then((res) => res.data)
+
+  servicePages.allDatoCmsServicePage.edges.forEach(({ node: service_page }) => {
+    createPage({
+      path: `servicepages/${service_page.slug}`,
+      component: path.resolve(`./src/templates/services.js`),
+      context: {
+        slug: service_page.slug,
+      },
     })
   })
 }
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
-
-  return new Promise((resolve, reject) => {
-    graphql(`
-      {
-        allDatoCmsServicePage {
-          edges {
-            node {
-              slug
-            }
-          }
-        }
-      }
-    `).then(result => {
-     result.data.allDatoCmsServicePage.edges.map(({ node: service_page }) => {
-        createPage({
-          path: `servicepages/${service_page.slug}`,
-          component: path.resolve(`./src/templates/services.js`),
-          context: {
-            slug: service_page.slug,
-          },
-        })
-      })
-      resolve()
-    })
-  })
-} 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === "build-html") {
     actions.setWebpackConfig({

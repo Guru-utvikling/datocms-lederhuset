@@ -8,18 +8,20 @@ const NyheterPage = ({ data }) => (
   <Layout>
     <h1 className='nyheter__title'>Nyheter</h1>
     <Masonry className='showcase'>
-      {data.allDatoCmsWork.edges.map(({ node: work }) => (
-        <div key={work.id} className='showcase__item'>
+      {data.allDatoCmsNyheter.edges.map(({ node: nyheter }) => (
+        <div key={nyheter.id} className='showcase__item'>
           <figure className='card'>
-            <Link to={`/nyheter/${work.slug}`} className='card__image'>
-              <Img fluid={work.coverImage.fluid} />
+            <Link to={`/nyheters/${nyheter.slug}`} className='card__image'>
+              <img src={nyheter.nyheterCoverimage.fluid.src} />
             </Link>
             <figcaption className='card__caption'>
               <h6 className='card__title'>
-                <Link to={`/nyheter/${work.slug}`}>{work.title}</Link>
+                <Link to={`/nyheters/${nyheter.slug}`}>
+                  {nyheter.nyheterTitle}
+                </Link>
               </h6>
               <div className='card__description'>
-                <p>{work.excerpt}</p>
+                <p>{nyheter.nyheterExcerpt}</p>
               </div>
             </figcaption>
           </figure>
@@ -32,21 +34,20 @@ const NyheterPage = ({ data }) => (
 export default NyheterPage
 
 export const query = graphql`
-  query NyheterQuery {
-    allDatoCmsWork(sort: { fields: [position], order: ASC }) {
+  query nyheterQueryPage {
+    allDatoCmsNyheter {
       edges {
         node {
-          id
-          title
+          nyheterTitle
           slug
-          excerpt
-          coverImage {
-            fluid(maxWidth: 450, imgixParams: { fm: "jpg", auto: "compress" }) {
-              ...GatsbyDatoCmsSizes
+          nyheterExcerpt
+          nyheterCoverimage {
+            fluid {
+              src
             }
           }
         }
       }
     }
   }
-`
+` 
