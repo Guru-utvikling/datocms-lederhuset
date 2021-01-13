@@ -14,6 +14,12 @@ export default ({ data }) => (
       </div>
       <div className='service_page__content--wraper'>
         <h1 className='service_page__title'>{data.datoCmsServicePage.title}</h1>
+        <div
+          className="sheet__body"
+          dangerouslySetInnerHTML={{
+            __html: data.datoCmsServicePage.postcontentNode.childMarkdownRemark.html,
+          }}
+        />
         <p className='service_page__content'>
           {data.datoCmsServicePage.content}
         </p>
@@ -26,10 +32,14 @@ export const query = graphql`
   query ServiceQuery($slug: String!) {
     datoCmsServicePage(slug: { eq: $slug }) {
       title
-      content
       background {
         fluid {
           src
+        }
+      }
+      postcontentNode {
+      childMarkdownRemark {
+        html
         }
       }
     }
