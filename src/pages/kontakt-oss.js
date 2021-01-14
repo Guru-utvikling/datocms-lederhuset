@@ -50,7 +50,6 @@ const KontaktOss = () => {
                 type='tel'
                 id='phone'
                 name='phone'
-                pattern='[0-9]{3}-[0-9]{2}-[0-9]{3}'
               />
             </label>
             <label>
