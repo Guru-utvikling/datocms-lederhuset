@@ -60,7 +60,7 @@ const Navigation = () => {
             {" "}
             <Link
               style={{ textDecoration: "none", color: "#A08629" }}
-              to='/servicepages/omstillingnedbemanning'
+              to='/servicepages/omstilling-nedbemanning'
             >
               Omstilling/nedbemanning
             </Link>
