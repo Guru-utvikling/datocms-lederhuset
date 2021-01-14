@@ -11,6 +11,7 @@ export default ({ data }) => (
       <HelmetDatoCms seo={data.datoCmsNyheter.seoMetaTags} />
       <div className="sheet__inner">
         <h1 className="sheet__title">{data.datoCmsNyheter.nyheterTitle}</h1>
+        <img src={data.datoCmsNyheter.nyheterCoverimage.fluid.src}/>
         <p className="sheet__lead">{data.datoCmsNyheter.nyheterExcerpt}</p>
         <div
           className="sheet__body"

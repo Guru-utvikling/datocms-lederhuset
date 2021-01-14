@@ -22,6 +22,7 @@ export default function Header() {
   `)
   return (
     <div className='container__articlePreview'>
+      <h2 className="employess__title">Se innleggene våre</h2>
       <Masonry style={{ width: "1200px" }} className='showcase'>
         {data.allDatoCmsNyheter.edges.map(({ node: nyheter }) => (
           <div key={nyheter.id} className='showcase__item'>
@@ -48,7 +49,9 @@ export default function Header() {
           </div>
         ))}
       </Masonry>
-      <Link className="employess__CTABtn" to="/nyheter">Se alle innleggene</Link>
+      <Link className='employess__CTABtn' to='/nyheter'>
+        Se alle innleggene
+      </Link>
     </div>
   )
 }
