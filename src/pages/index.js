@@ -17,11 +17,32 @@ const IndexPage = ({ data }) => (
       <FourthSection />
       <FifthSection />
       <SixthSection /> 
-      <ArticlePreview/>
+      <ArticlePreview data={data}/>
     </main>
   </Layout>
 )
 
 export default IndexPage
+
+
+
+export const query = graphql`
+  query nyheterQueryIndexPage {
+    allDatoCmsNyheter {
+      edges {
+        node {
+          nyheterTitle
+          slug
+          nyheterExcerpt
+          nyheterCoverimage {
+            sizes {
+              src
+            }
+          }
+        }
+      }
+    }
+  }
+` 
 
 
