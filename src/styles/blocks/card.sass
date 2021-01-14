@@ -4,6 +4,7 @@
   text-align: center
   font-size: 3rem
   margin: 2rem
+  color: $main
 .card__image
   display: block
   position: relative
@@ -47,18 +48,25 @@
 .card__caption
   background-color: white
   padding: 20px
+.card__caption-lesmer
+  background-color: white
+  padding: 0px 20px 20px 0px
+  text-align: end
 
+.lesmer-link
+  color: $main
+  text-decoration: none
+  text-align: end
 .card__title
   margin-bottom: 10px
   font-size: 1.5rem
   color: $main
 
   a
-    text-transform: uppercase
+    text-transform: capitalize
     text-decoration: none
     font-weight: bold
-
-    color: $dark-body-color
+    color: $main
 
     &:hover
       border-bottom: dotted 1px #9055a2
