@@ -5,7 +5,6 @@ import PlaceIcon from "@material-ui/icons/Place"
 import MailIcon from "@material-ui/icons/Mail"
 import PhoneIcon from "@material-ui/icons/Phone"
 const KontaktOss = () => {
-
   return (
     <Layout>
       <div className='container__kontakt-oss'>
@@ -36,21 +35,22 @@ const KontaktOss = () => {
         <div className='container__kontakt-oss--form'>
           <form
             className='kontakt-oss--form'
-            method="POST" 
-            data-netlify="true"
-            action="/thank-you" 
-            name="Kontakt oss Form"
+            method='POST'
+            data-netlify='true'
+            action='/thank-you'
+            name='Kontakt oss Form'
           >
-            <input type="hidden" name="form-name" value="Kontakt oss Form" />
+            <input type='hidden' name='form-name' value='Kontakt oss Form' />
             <label>
               <input placeholder='Navn*' type='text' name='name' id='name' />
             </label>
             <label>
               <input
                 placeholder='Telefon*'
-                type='text'
-                name='subject'
-                id='subject'
+                type='tel'
+                id='phone'
+                name='phone'
+                pattern='[0-9]{3}-[0-9]{2}-[0-9]{3}'
               />
             </label>
             <label>
@@ -65,8 +65,8 @@ const KontaktOss = () => {
               <input
                 placeholder='Firma (Company)'
                 type='text'
-                name='subject'
-                id='subject'
+                name='Firma'
+                id='firma'
               />
             </label>
             <label>

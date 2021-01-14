@@ -14,7 +14,13 @@ const SixthSection = (props) => {
       </div>
 
       <div className='container__question--form'>
-        <form>
+      <form
+            method="POST" 
+            data-netlify="true"
+            action="/thank-you" 
+            name="Newsletter Signup"
+          >
+          <input type="hidden" name="form-name" value="Newsletter Signup" />
           <div className='question__form--wrapper'>
             <input placeholder='E-post' className='question__text--input' />
             <input className='question__submit--input' type='submit' value='' />
