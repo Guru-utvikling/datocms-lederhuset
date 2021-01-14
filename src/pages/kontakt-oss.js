@@ -4,15 +4,13 @@ import Layout from "../components/layout"
 import PlaceIcon from "@material-ui/icons/Place"
 import MailIcon from "@material-ui/icons/Mail"
 import PhoneIcon from "@material-ui/icons/Phone"
-import { navigate } from "@material-ui/icons/Phone"
-
-
+import Contact from "../components/Contact"
+import { navigate } from "gatsby"
 const KontaktOss = () => {
-
-const handleSubmit = (event) =>{
-  navigate("/success");
-  event.preventDefault()
-}
+  const handleSubmit = (event) => {
+    navigate("/")
+    event.preventDefault()
+  }
 
   return (
     <Layout>
@@ -41,7 +39,8 @@ const handleSubmit = (event) =>{
             <li className='kontakt-oss__list--item'></li>
           </ul>
         </div>
-        <div className='container__kontakt-oss--form'>
+        <Contact />
+        {/*<div className='container__kontakt-oss--form'>
           <form
             className='kontakt-oss--form'
             method='post'
@@ -86,7 +85,7 @@ const handleSubmit = (event) =>{
               Kontakt oss
             </button>
           </form>
-        </div>
+        </div> */}
       </div>
     </Layout>
   )
