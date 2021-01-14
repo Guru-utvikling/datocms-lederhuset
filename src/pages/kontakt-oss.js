@@ -4,7 +4,16 @@ import Layout from "../components/layout"
 import PlaceIcon from "@material-ui/icons/Place"
 import MailIcon from "@material-ui/icons/Mail"
 import PhoneIcon from "@material-ui/icons/Phone"
+import { navigate } from "@material-ui/icons/Phone"
+
+
 const KontaktOss = () => {
+
+const handleSubmit = (event) =>{
+  navigate("/success");
+  event.preventDefault()
+}
+
   return (
     <Layout>
       <div className='container__kontakt-oss'>
@@ -33,7 +42,11 @@ const KontaktOss = () => {
           </ul>
         </div>
         <div className='container__kontakt-oss--form'>
-          <form className='kontakt-oss--form' method='post' action='#'>
+          <form
+            className='kontakt-oss--form'
+            method='post'
+            data-netlify="true"
+          >
             <label>
               <input placeholder='Navn*' type='text' name='name' id='name' />
             </label>
@@ -69,7 +82,9 @@ const KontaktOss = () => {
                 rows='5'
               />
             </label>
-            <button className="submit-btn-form" type='submit'>Kontakt oss</button>
+            <button  onClick={handleSubmit} className='submit-btn-form' type='submit'>
+              Kontakt oss
+            </button>
           </form>
         </div>
       </div>
