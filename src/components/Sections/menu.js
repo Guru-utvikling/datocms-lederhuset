@@ -17,7 +17,7 @@ const Navigation = () => {
   return (
     <ul className='navbar__menu'>
       <li>
-        <Link to='/om-oss'>Om Oss</Link>
+        <Link to='/om-oss'>Om oss</Link>
       </li>
       <li onClick={handleClick}>
         <Link>

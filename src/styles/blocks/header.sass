@@ -1,9 +1,15 @@
 .container__section1
   display: flex
   flex-direction: row
+  background-color: $main
 
 .container__header--right
   displa: block
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding: 3rem
   width: 55%
   background-image: url("https://www.datocms-assets.com/37833/1607692326-right-bg-header.png")
   background-size: cover
@@ -13,13 +19,10 @@
 .container__header--left
   width: 45%
   height: auto
-  display: flex
-  padding: 5rem 5rem
-  justify-content: center
-  flex-direction: column
+  margin: 2rem
   background-image: url("https://www.datocms-assets.com/37833/1607691888-home.svg")
-  background-size: 70% 70%
-  background-position-x: 50% 50%
+  background-size: contain
+  background-position: center center
   background-repeat: no-repeat
   background-color: $main
 .header__CTABtn
@@ -51,8 +54,11 @@
     padding: 2rem 2rem
 
 @media screen and (max-width: 899px)
+
+  .container__section1
+    flex-direction: column
   .header__content,.header__title,.header__CTABtn
-    width: 100%
+    width: 80%
     text-align: center
   .header__content
     font-size: 1rem
@@ -62,12 +68,10 @@
   .header__CTABtn
     width: 50%
   .container__header--left
-    background-image: url("https://www.datocms-assets.com/37833/1605798019-header-left-bg-2x.png")
-    width: 100%
-    background-size: 120% 650px
-    background-repeat: no-repeat
-    align-items: center
-    display: flex
-    flex-direction: column
-    height: auto
+    width: auto
+    order: 2
+    height: 150px
+  .container__header--right
+    width: auto
     padding: 1rem
+    order: 1

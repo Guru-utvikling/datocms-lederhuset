@@ -1,16 +1,30 @@
 import React, { useEffect, useState } from "react"
 import Layout from "../components/layout"
 import ActiveJobList from "../components/ActiveJobsList"
+import { makeStyles } from "@material-ui/core/styles"
+import CircularProgress from "@material-ui/core/CircularProgress"
+import Typography from "@material-ui/core/Typography"
+import Fade from "@material-ui/core/Fade"
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+    "& > * + *": {
+      marginLeft: theme.spacing(2),
+    },
+  },
+}))
+
 const LedigeStillinger = () => {
   const [activeJobs, setActiveJobs] = useState()
   const [dataIsLoading, setDataIsLoading] = useState(true)
+  const classes = useStyles()
 
   const getAllActiveJobs = (req, res) => {
     const proxy = "https://cors-anywhere.herokuapp.com/"
     const api = `https://api.recman.no/v2/get/?key=${process.env.GATSBY_API_KEY}&scope=jobPost&fields=name,ingress,startDate,endDate,logo`
-    const url =  proxy + api
+    const url = proxy + api
 
-    return fetch( url, {
+    return fetch(url, {
       method: "GET",
     })
       .then((res) => {
@@ -28,7 +42,6 @@ const LedigeStillinger = () => {
     })
   }
 
-
   useEffect(() => {
     init()
     return () => {}
@@ -36,10 +49,32 @@ const LedigeStillinger = () => {
 
   return (
     <Layout>
-      <div>
-      {!dataIsLoading ? <ActiveJobList activelist={activeJobs}/> : <div className="loading-div"><h1>Loading...</h1></div>}
-      </div>
-
+      {!dataIsLoading ? (
+        <Fade in>
+          <div className='wrapper__ledige'>
+            <div className='container__ledige-stillinger'>
+              <div style={{ width: "40%" }}>
+                <div
+                  style={{ position: "fixed" }}
+                  className='container__ledige-filters'
+                >
+                  <Typography component='h5' variant='h5'>
+                    Alle
+                  </Typography>
+                </div>
+              </div>
+              <div className='container__ledige-list'>
+                <ActiveJobList activelist={activeJobs} />
+              </div>
+            </div>
+          </div>
+        </Fade>
+      ) : (
+        <div className='loading-div'>
+          <h1>Loading</h1>
+          <CircularProgress color='primary' />
+        </div>
+      )}
     </Layout>
   )
 }

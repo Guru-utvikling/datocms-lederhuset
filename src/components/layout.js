@@ -8,50 +8,52 @@ import { HelmetDatoCms } from "gatsby-source-datocms"
 import Logo from "../assets/lederhusetlogo.svg"
 import "../styles/index.scss"
 import Footer from "../components/Sections/Footer/footer"
-import Menu from '../components/Sections/menu'
-
+import Menu from "../components/Sections/menu"
+import Fade from "@material-ui/core/Fade"
 const TemplateWrapper = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false)
-  
+
   return (
-        <div className={`container ${showMenu ? "is-open" : ""}`}>
-          {/*<HelmetDatoCms
+    <Fade in>
+      <div className={`container ${showMenu ? "is-open" : ""}`}>
+        {/*<HelmetDatoCms
             favicon={data.datoCmsSite.faviconMetaTags}
             seo={data.datoCmsHome.seoMetaTags}
           /> */}
-          <div className='container__navbar'>
-            <div className='navbar'>
-              <div className='navbar__logo'>
-                <Link to='/'>
-                  <img width={462} height={96} src={Logo}></img>
-                </Link>
-              </div>
-              <div />
-              <Menu />
+        <div className='container__navbar'>
+          <div className='navbar'>
+            <div className='navbar__logo'>
+              <Link to='/'>
+                <img width={462} height={96} src={Logo}></img>
+              </Link>
             </div>
-          </div>
-          <div className='container__body'>
-            <div className='container__mobile-header'>
-              <div className='mobile-header'>
-                <div className='mobile-header__menu'>
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault()
-                      setShowMenu(!showMenu)
-                    }}
-                  />
-                </div>
-                <div className='mobile-header__logo'>
-                  <Link to='/'>
-                    <img width={140} height={30} src={Logo}></img>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            {children}
-            <Footer />
+            <div />
+            <Menu />
           </div>
         </div>
+        <div className='container__body'>
+          <div className='container__mobile-header'>
+            <div className='mobile-header'>
+              <div className='mobile-header__menu'>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault()
+                    setShowMenu(!showMenu)
+                  }}
+                />
+              </div>
+              <div className='mobile-header__logo'>
+                <Link to='/'>
+                  <img width={140} height={30} src={Logo}></img>
+                </Link>
+              </div>
+            </div>
+          </div>
+          {children}
+          <Footer />
+        </div>
+      </div>
+    </Fade>
   )
 }
 
@@ -61,7 +63,6 @@ TemplateWrapper.propTypes = {
 
 export default TemplateWrapper
 /* eslint-enable jsx-a11y/anchor-has-content, jsx-a11y/anchor-is-valid*/
-
 
 /*<StaticQuery
 query={graphql`

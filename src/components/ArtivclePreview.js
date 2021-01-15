@@ -6,7 +6,7 @@ const ArticlePreview = (props) => {
   return (
     <div className='container__articlePreview'>
       <h2 className='employess__title'>Se innleggene våre</h2>
-      <Masonry style={{ width: "1200px" }} className='showcase'>
+      <Masonry  style={{width:"100%" ,marginTop:"3rem"}} className='showcase'>
         {props.data.allDatoCmsNyheter.edges.map(({ node: nyheter }) => (
           <div key={nyheter.id} className='showcase__item'>
             <figure className='card'>

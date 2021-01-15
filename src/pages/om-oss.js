@@ -9,12 +9,11 @@ const OmOss = (props) => {
           <h1 className='omOss__title'>Om oss</h1>
           <p className='omOss__content'>
             Lederhuset er et mindre rådgivningsselskap innen rekruttering av
-            ledere og nøkkelpersoner , nedbemanning og outplacement og generelle
-            rådgivningstjenester inne ledelse.
+            ledere og nøkkelpersoner, nedbemanning og outplacement og generelle
+            rådgivningstjenester innen ledelse.
           </p>
-          <p className='omOss__content'>Lederhuset tilbyr følgende:</p>
-          <p className='omOss__content'>Rådgivning innen</p>
-          <ul>
+          <p style={{ fontWeight:'bold'}} className='omOss__content'>Lederhuset tilbyr følgende rådgivning innen :</p>
+          <ul className="omOss__list">
             <li>Rekruttering av ledere og nøkkelpersonell</li>
             <li>Rekruttering av styremedlemmer</li>
             <li>Lederutvikling</li>

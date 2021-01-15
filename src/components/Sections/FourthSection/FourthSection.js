@@ -1,35 +1,76 @@
 import React from "react"
 import { Link } from "gatsby"
+import ListItem from "@material-ui/core/ListItem"
+import ListItemIcon from "@material-ui/core/ListItemIcon"
+import ListItemText from "@material-ui/core/ListItemText"
+import CheckMarkIcon from "../../../assets/Icon-awesome-check-circle.svg"
 export default function FourthSection() {
   return (
     <div className='container__employess'>
-      <ul className='container__employess__List'>
-        <h2 className='employess__title'>Ønsker du hjelp til:</h2>
-        <li className='container__employessItem'>
-          <p className='servicebox__content--para'>Rekruttering</p>
-        </li>
-        <li className='container__employessItem'>
-          <p className='servicebox__content--para'>Lederutvikling</p>
-        </li>
-        <li className='container__employessItem'>
-          <p className='servicebox__content--para'>Mentoring</p>
-        </li>
-        <li className='container__employessItem'>
-          <p className='servicebox__content--para'>Omstilling nedbemanning</p>
-        </li>
+      <div className='container__list--wrapper'>
+        <h2 className='employess__title'>For kunder</h2>
+        <ul className='container__employess__List'>
+          <Link to={"/servicepages/rekruttering"} className='listItem__link'>
+            <ListItem button>
+              <ListItemIcon>
+                <img src={CheckMarkIcon} />
+              </ListItemIcon>
+              <ListItemText primary='Rekruttering' />
+            </ListItem>
+          </Link>
+          <Link to={"/servicepages/lederutvikling"} className='listItem__link'>
+            <ListItem button>
+              <ListItemIcon>
+                <img src={CheckMarkIcon} />
+              </ListItemIcon>
+              <ListItemText primary='Lederutvikling' />
+            </ListItem>
+          </Link>
+          <Link to={"/servicepages/mentoring"} className='listItem__link'>
+            <ListItem button>
+              <ListItemIcon>
+                <img src={CheckMarkIcon} />
+              </ListItemIcon>
+              <ListItemText primary='Mentoring' />
+            </ListItem>
+          </Link>
+          <Link
+            to={"/servicepages/omstilling-nedbemanning"}
+            className='listItem__link'
+          >
+            <ListItem button>
+              <ListItemIcon>
+                <img src={CheckMarkIcon} />
+              </ListItemIcon>
+              <ListItemText primary='Omstilling nedbemanning' />
+            </ListItem>
+          </Link>
+        </ul>
         <Link className='employess__CTABtn' to='/kontakt-oss'>
           KONTAKT OSS
         </Link>
-      </ul>
-      <ul className='container__employess__List'>
-        <h2 className='employess__title'>Søker du nye utfordringer?</h2>
-        <li className='container__employessItem'>
-          <p className='servicebox__content--para'>Rekruttering</p>
-        </li>
-        <li className='container__employessItem'>
-          <p className='servicebox__content--para'>Lederutvikling</p>
-        </li>
-      </ul>
+      </div>
+      <div className='container__list--wrapper'>
+        <h2 className='employess__title'>For kandidater</h2>
+        <ul className='container__employess__List'>
+          <Link to={"/servicepages/rekruttering"} className='listItem__link'>
+            <ListItem button>
+              <ListItemIcon>
+                <img src={CheckMarkIcon} />
+              </ListItemIcon>
+              <ListItemText primary='Rekruttering' />
+            </ListItem>
+          </Link>
+          <Link to={"/servicepages/lederutvikling"} className='listItem__link'>
+            <ListItem button>
+              <ListItemIcon>
+                <img src={CheckMarkIcon} />
+              </ListItemIcon>
+              <ListItemText primary='Lederutvikling' />
+            </ListItem>
+          </Link>
+        </ul>
+      </div>
     </div>
   )
 }

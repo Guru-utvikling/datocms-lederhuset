@@ -2,33 +2,33 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 const data = [
   {
-    title: "Downsizing and outplacement",
+    title: "Nedbemanning og outplacement",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "I situasjoner der bedriften må nedbemanne har vi erfaring med bistand og rådgivning i slike prosesser. Dette kan være grupper av ansatte eller enkeltpersoner som av ulike årsaker skal hjelpes over i nye roller.",
     id: 1,
     icon: "https://www.datocms-assets.com/37833/1605866439-icon-1.png",
     slug:'omstillingnedbemanning'
   },
   {
-    title: "Mentoring and career patronage",
+    title: "Mentoring",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "Spesielt yngre og ferske i lederrollen kan ha behov for å ha en dedikert ekstern person som sparringspartner innen de utfordringene som lederen har i sitt operative lederskap.",
     id: 2,
     icon: "https://www.datocms-assets.com/37833/1605866517-icon-2.svg",
     slug:"mentoring"
   },
   {
-    title: "Leadership development",
+    title: "Lederutvikling",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "La oss være en partner i utviklingen av både deg som leder og dine øvrige ledere i bedriften. Både på individnivå og som team.",
     id: 3,
     icon: "https://www.datocms-assets.com/37833/1605866565-icon-3.svg",
     slug:"lederutvikling"
   },
   {
-    title: "Recruitment of managers, key personel and board members",
+    title: "Vi rekrutterer ledere og nøkkelpersonell",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "Lederhuset hjelper næringslivet med å ansette gode ledere. Vi skal også hjelpe gode ledere til å finne de riktige arbeidsgiverne og riktig ny stilling.",
     id: 4,
     icon: "https://www.datocms-assets.com/37833/1605866622-icon-4.svg",
     slug:'rekruttering'
