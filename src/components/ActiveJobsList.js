@@ -40,32 +40,37 @@ const ActiveJobsList = (props) => {
       {props.activelist.data ? (
         Object.keys(props.activelist.data).map((item) => {
           return (
-            <Card key={props.activelist.data[item].id} className={classes.root}>
-              <CardMedia
-                className={classes.cover}
-                image={props.activelist.data[item].logo}
-                title='Live from space album cover'
-              />
-              <div className={classes.details}>
-                <CardContent className={classes.content}>
-                  <Typography component='h5' variant='h5'>
-                    {props.activelist.data[item].name}
-                  </Typography>
-                  <Typography component='h7' variant='h7'>
-                    <span className='small_bold'>Salary : </span>
-                    {props.activelist.data[item].salary}
-                  </Typography>
-                  <Typography component='h7' variant='h7'>
-                    <span className='small_bold'>Start Date : </span>{" "}
-                    {props.activelist.data[item].startDate}
-                  </Typography>
+            <Link  style={{textDecoration:'none'}} to={props.activelist.data[item].applyUrl} >
+              <Card
+                key={props.activelist.data[item].jobPostId}
+                className={classes.root}
+              >
+                <CardMedia
+                  className={classes.cover}
+                  image={props.activelist.data[item].logo}
+                  title='Live from space album cover'
+                />
+                <div className={classes.details}>
+                  <CardContent className={classes.content}>
+                    <Typography component='h5' variant='h5'>
+                      {props.activelist.data[item].name}
+                    </Typography>
+                    <Typography component='h7' variant='h7'>
+                      <span className='small_bold'>Salary : </span>
+                      {props.activelist.data[item].salary}
+                    </Typography>
+                    <Typography component='h7' variant='h7'>
+                      <span className='small_bold'>Start Date : </span>{" "}
+                      {props.activelist.data[item].startDate}
+                    </Typography>
 
-                  <Typography variant='subtitle1' color='textSecondary'>
-                    {props.activelist.data[item].ingress}
-                  </Typography>
-                </CardContent>
-              </div>
-            </Card>
+                    <Typography variant='subtitle1' color='textSecondary'>
+                      {props.activelist.data[item].ingress}
+                    </Typography>
+                  </CardContent>
+                </div>
+              </Card>
+            </Link>
           )
         })
       ) : (

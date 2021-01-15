@@ -5,6 +5,8 @@ import { makeStyles } from "@material-ui/core/styles"
 import CircularProgress from "@material-ui/core/CircularProgress"
 import Typography from "@material-ui/core/Typography"
 import Fade from "@material-ui/core/Fade"
+import Paper from "@material-ui/core/Paper"
+import { Link } from "gatsby"
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -50,25 +52,32 @@ const LedigeStillinger = () => {
   return (
     <Layout>
       {!dataIsLoading ? (
-        <Fade in>
+        <>
+          <h1 className='nyheter__title'>Ledige stillinger</h1>
           <div className='wrapper__ledige'>
+
             <div className='container__ledige-stillinger'>
-              <div style={{ width: "40%" }}>
-                <div
-                  style={{ position: "fixed" }}
-                  className='container__ledige-filters'
+
+              <div className="ledige-filters__wrapper" >
+                
+                <Paper className='container__ledige-filters'
                 >
-                  <Typography component='h5' variant='h5'>
-                    Alle
-                  </Typography>
-                </div>
+                  <Typography component='h7' variant='h7'>
+                      Filters
+                    </Typography>
+                  <Link to="/ledige-stillinger">
+                    <Typography component='h5' variant='h5'>
+                      Alle
+                    </Typography>
+                  </Link>
+                </Paper>
               </div>
               <div className='container__ledige-list'>
                 <ActiveJobList activelist={activeJobs} />
               </div>
             </div>
           </div>
-        </Fade>
+        </>
       ) : (
         <div className='loading-div'>
           <h1>Loading</h1>

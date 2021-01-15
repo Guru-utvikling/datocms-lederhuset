@@ -8,6 +8,7 @@ import FourthSection from "../components/Sections/FourthSection/FourthSection"
 import FifthSection from "../components/Sections/Fifth Section/FifthSection"
 import SixthSection from "../components/Sections/Sixth Section/SixthSection"
 import ArticlePreview from "../components/ArtivclePreview"
+
 const IndexPage = ({ data }) => (
   <Layout>
     <main className='container__main'>

@@ -1,14 +1,38 @@
 .wrapper__ledige
   display: flex
   justify-content: center
-  align-content:
+  align-content: center
 .container__ledige-stillinger
   display: flex
   flex-direction: row
   max-width: 1390px
-.container__ledige-filters
+.ledige-filters__wrapper
   width: 30%
+  height: 250px
+  margin-top: 2rem
+.container__ledige-filters
+  position: fixed
+  width: auto
   height: 250px
   margin: 2rem
 .container__ledige-list
-  width: 60%
+  width: 70%
+@media screen and (max-width: 899px)
+  .container__ledige-filters
+    position: unset
+    width: 100%
+    padding: 2rem
+    height: auto
+  .ledige-filters__wrapper
+    width: 100%
+    height: auto
+    margin: 0rem
+    text-align: center
+  .wrapper__ledige
+    flex-direction: column
+  .container__ledige-stillinger
+    flex-direction: column
+  .container__ledige-filters,  .container__ledige-list
+    width: auto
+  .container__ledige-list,.MuiCardMedia-root
+    width: 100% !important
