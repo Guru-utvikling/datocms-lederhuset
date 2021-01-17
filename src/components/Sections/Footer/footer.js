@@ -7,10 +7,11 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import PhoneIcon from "@material-ui/icons/Phone"
 import PlaceIcon from "@material-ui/icons/Place"
 import EmailIcon from "@material-ui/icons/Email"
+import Container from "@material-ui/core/Container"
 const Footer = () => {
   return (
     <footer className='container__footer'>
-      <img src={Logo} />
+      <Container>
       <div className='container__footer__list'>
         <div className='container__footer--item'>
           <h2 className='footer_title'>Om oss</h2>
@@ -59,6 +60,9 @@ const Footer = () => {
           </Link>
         </div>
       </div>
+      </Container>
+      <img src={Logo} />
+
     </footer>
   )
 }

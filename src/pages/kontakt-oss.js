@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import PlaceIcon from "@material-ui/icons/Place"
 import MailIcon from "@material-ui/icons/Mail"
 import PhoneIcon from "@material-ui/icons/Phone"
+import Container from "@material-ui/core/Container"
 const KontaktOss = () => {
   return (
     <Layout>
@@ -32,55 +33,57 @@ const KontaktOss = () => {
             <li className='kontakt-oss__list--item'></li>
           </ul>
         </div>
-        <div className='container__kontakt-oss--form'>
-          <form
-            className='kontakt-oss--form'
-            method='POST'
-            data-netlify='true'
-            action='/thank-you'
-            name='Kontakt oss Form'
-          >
-            <input type='hidden' name='form-name' value='Kontakt oss Form' />
-            <label>
-              <input placeholder='Navn*' type='text' name='name' id='name' />
-            </label>
-            <label>
-              <input
-                placeholder='Telefon*'
-                type='tel'
-                id='phone'
-                name='phone'
-              />
-            </label>
-            <label>
-              <input
-                placeholder='E-post*'
-                type='email'
-                name='email'
-                id='email'
-              />
-            </label>
-            <label>
-              <input
-                placeholder='Firma (Company)'
-                type='text'
-                name='Firma'
-                id='firma'
-              />
-            </label>
-            <label>
-              <textarea
-                placeholder='Melding'
-                name='message'
-                id='message'
-                rows='5'
-              />
-            </label>
-            <button className='submit-btn-form' type='submit'>
-              Kontakt oss
-            </button>
-          </form>
-        </div>
+        <Container>
+          <div className='container__kontakt-oss--form'>
+            <form
+              className='kontakt-oss--form'
+              method='POST'
+              data-netlify='true'
+              action='/thank-you'
+              name='Kontakt oss Form'
+            >
+              <input type='hidden' name='form-name' value='Kontakt oss Form' />
+              <label>
+                <input placeholder='Navn*' type='text' name='name' id='name' />
+              </label>
+              <label>
+                <input
+                  placeholder='Telefon*'
+                  type='tel'
+                  id='phone'
+                  name='phone'
+                />
+              </label>
+              <label>
+                <input
+                  placeholder='E-post*'
+                  type='email'
+                  name='email'
+                  id='email'
+                />
+              </label>
+              <label>
+                <input
+                  placeholder='Firma (Company)'
+                  type='text'
+                  name='Firma'
+                  id='firma'
+                />
+              </label>
+              <label>
+                <textarea
+                  placeholder='Melding'
+                  name='message'
+                  id='message'
+                  rows='5'
+                />
+              </label>
+              <button className='submit-btn-form' type='submit'>
+                Kontakt oss
+              </button>
+            </form>
+          </div>
+        </Container>
       </div>
     </Layout>
   )

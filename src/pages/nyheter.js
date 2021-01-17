@@ -42,8 +42,8 @@ export const query = graphql`
           slug
           nyheterExcerpt
           nyheterCoverimage {
-            fluid {
-              src
+            fluid(maxWidth: 500, imgixParams: { fm: "jpg", auto: "compress" }) {
+              ...GatsbyDatoCmsFluid
             }
           }
         }

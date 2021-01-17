@@ -6,7 +6,7 @@ const data = [
     description:
       "I situasjoner der bedriften må nedbemanne har vi erfaring med bistand og rådgivning i slike prosesser. Dette kan være grupper av ansatte eller enkeltpersoner som av ulike årsaker skal hjelpes over i nye roller.",
     id: 1,
-    icon: "https://www.datocms-assets.com/37833/1605866439-icon-1.png",
+    icon: "https://www.datocms-assets.com/37833/1610917659-people-icon.png",
     slug:'omstillingnedbemanning'
   },
   {
@@ -40,7 +40,7 @@ export default function SecondSection() {
       {data.map((item) => (
         <div key={item.id} className='container__servicebox'>
           <div className='container__servicebox--icon'>
-            <img className='servicebox__icon' src={item.icon}></img>
+            <img height={144} width={144} className='servicebox__icon' src={item.icon}></img>
           </div>
           <div className='container__servicebox--content'>
             <h1 className='servicebox__content--title'>{item.title}</h1>

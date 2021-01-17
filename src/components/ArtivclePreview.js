@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Masonry from "react-masonry-component"
-
+import Image from 'gatsby-image'
 const ArticlePreview = (props) => {
   return (
     <div className='container__articlePreview'>
@@ -11,7 +11,7 @@ const ArticlePreview = (props) => {
           <div key={nyheter.id} className='showcase__item'>
             <figure className='card'>
               <Link to={`/nyheters/${nyheter.slug}`} className='card__image'>
-                <img src={nyheter.nyheterCoverimage.sizes.src} />
+                <Image objectFit="cover" fluid={nyheter.nyheterCoverimage.fluid} src={nyheter.nyheterCoverimage.fluid} />
               </Link>
               <figcaption className='card__caption'>
                 <h6 className='card__title'>
