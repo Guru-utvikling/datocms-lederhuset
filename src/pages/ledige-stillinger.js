@@ -7,6 +7,7 @@ import Typography from "@material-ui/core/Typography"
 import Fade from "@material-ui/core/Fade"
 import Paper from "@material-ui/core/Paper"
 import { Link } from "gatsby"
+import { Divider } from "@material-ui/core"
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -52,32 +53,31 @@ const LedigeStillinger = () => {
   return (
     <Layout>
       {!dataIsLoading ? (
-        <>
+        <div style={{display:"flex", flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
           <h1 className='nyheter__title'>Ledige stillinger</h1>
-          <div className='wrapper__ledige'>
 
-            <div className='container__ledige-stillinger'>
-
-              <div className="ledige-filters__wrapper" >
-                
-                <Paper className='container__ledige-filters'
-                >
-                  <Typography component='h7' variant='h7'>
-                      Filters
-                    </Typography>
-                  <Link to="/ledige-stillinger">
-                    <Typography component='h5' variant='h5'>
+          <div className='container__ledige-stillinger'>
+            {/*<div className='ledige-filters__wrapper'>
+              <div className='container__ledige-filters'>
+                <Typography component='h3' variant='h5'>
+                  Filters
+                </Typography>
+                  <Link to='/ledige-stillinger'>
+                    <Typography component='p' variant='p'>
                       Alle
                     </Typography>
                   </Link>
-                </Paper>
               </div>
-              <div className='container__ledige-list'>
-                <ActiveJobList activelist={activeJobs} />
-              </div>
+            </div> */}
+            <div className='container__ledige-list'>
+              <ActiveJobList activelist={activeJobs} />
             </div>
+
           </div>
-        </>
+          <Link to='#' className='ga-top'>
+              Gå toppen
+            </Link>
+        </div>
       ) : (
         <div className='loading-div'>
           <h1>Loading</h1>
