@@ -4,26 +4,27 @@ import Button from "@material-ui/core/Button"
 import Menu from "@material-ui/core/Menu"
 import MenuItem from "@material-ui/core/MenuItem"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
+import Fade from "@material-ui/core/Fade"
+import SimpleMenu from './SimpleMenu'
 const Navigation = () => {
   const [anchorEl, setAnchorEl] = React.useState(null)
+  const [anchorEl2, setAnchorEl2] = React.useState(null)
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget)
+    setAnchorEl2(event.currentTarget)
   }
 
   const handleClose = () => {
     setAnchorEl(null)
+    setAnchorEl2(null)
   }
   return (
     <ul className='navbar__menu'>
-      <li>
-        <Link to='/om-oss'>Om oss</Link>
-      </li>
+      <SimpleMenu/>
       <li onClick={handleClick}>
-        <Link>
-          Tjenester
-        </Link>
-        <ExpandMoreIcon width={16} height={16} style={{ color: "#A08629" }} />
+        <Link className="dropdown-menu-item">Tjenester<ExpandMoreIcon width={16} height={16} style={{ color: "#A08629" }} /></Link>
+        
 
         <Menu
           id='simple-menu'
