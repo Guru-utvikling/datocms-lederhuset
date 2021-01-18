@@ -11,12 +11,6 @@ const KontaktOss = () => {
       <div className='container__kontakt-oss'>
         <div className='container__kontakt-oss--content'>
           <h1 className='kontakt-oss__title'>Kontakt Oss</h1>
-          <p className='kontakt-oss__para'>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </p>
           <ul className='kontakt-oss__list'>
             <li className='kontakt-oss__list--item'>
               <PlaceIcon style={{ color: "#A08629", marginRight: "1rem" }} />
@@ -24,11 +18,13 @@ const KontaktOss = () => {
             </li>
             <li className='kontakt-oss__list__item'>
               <PhoneIcon style={{ color: "#A08629", marginRight: "1rem" }} />
-              <Link to='tel:+47567875123'>(+47) 567 875 123</Link>
+              <Link to='tel:+4740021570'>(+47) 400 21 570</Link>
             </li>
             <li className='kontakt-oss__list--item'>
               <MailIcon style={{ color: "#A08629", marginRight: "1rem" }} />
-              <Link to='mailto:post@epost.no'>post@epost.no</Link>
+              <Link to='mailto:bjarne@lederhuset.com'>
+                bjarne@lederhuset.com{" "}
+              </Link>
             </li>
             <li className='kontakt-oss__list--item'></li>
           </ul>
@@ -44,7 +40,13 @@ const KontaktOss = () => {
             >
               <input type='hidden' name='form-name' value='Kontakt oss Form' />
               <label>
-                <input placeholder='Navn*' type='text' name='name' id='name' />
+                <input
+                  required
+                  placeholder='Navn*'
+                  type='text'
+                  name='name'
+                  id='name'
+                />
               </label>
               <label>
                 <input
@@ -52,6 +54,7 @@ const KontaktOss = () => {
                   type='tel'
                   id='phone'
                   name='phone'
+                  required
                 />
               </label>
               <label>
@@ -60,6 +63,7 @@ const KontaktOss = () => {
                   type='email'
                   name='email'
                   id='email'
+                  required
                 />
               </label>
               <label>
@@ -75,6 +79,7 @@ const KontaktOss = () => {
                   placeholder='Melding'
                   name='message'
                   id='message'
+                  required
                   rows='5'
                 />
               </label>

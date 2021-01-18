@@ -1,0 +1,21 @@
+.ansatte__container
+  margin: auto
+  padding: 3rem
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+.ansatte__content--wrapper
+  padding: 2rem
+  h3
+    font-size: 2rem
+    color: $main
+  a
+    color: inherit
+    text-decoration: none
+@media screen and (min-width:900px) and (max-width: 1200px)
+  .ansatte__container
+    grid-template-columns: repeat(3, 1fr)
+@media screen and (max-width: 899px)
+  .ansatte__container
+    grid-template-columns: repeat(1, 1fr)
+  .ansatte__content--wrapper
+    text-align: center
