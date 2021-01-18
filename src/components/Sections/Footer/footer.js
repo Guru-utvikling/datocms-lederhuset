@@ -11,60 +11,65 @@ import Container from "@material-ui/core/Container"
 const Footer = () => {
   return (
     <footer className='container__footer'>
-      <Container>
-      <div className='container__footer__list'>
-        <div className='container__footer--item'>
-          <h2 className='footer_title'>Om oss</h2>
-          <p className='footer_para'>
-            Lederhuset er et mindre rådgivningsselskap innen rekruttering av
-            ledere og nøkkelpersoner , nedbemanning og outplacement og generelle
-            rådgivningstjenester inne ledelse.
-          </p>
-        </div>
-        <div className='container__footer--item'>
+      <ul>
+        <li>
           <h2 className='footer_title'>Kontakt oss</h2>
-          <ul className='footer__contact--list'>
-            <li>
-              <span>
-                <PhoneIcon fontSize='large' />
-              </span>
-              Halfdan Kjerulfsgate 4 5017 Bergen
-            </li>
-            <li>
-              {" "}
-              <span>
-                <PlaceIcon />
-              </span>
-              (+47) 567 875 123
-            </li>
-            <li>
-              {" "}
-              <span>
-                <EmailIcon />
-              </span>
-              post@epost.no
-            </li>
-          </ul>
-        </div>
-        <div className='container__footer--item'>
-          <h2 className='footer_title'>Meny</h2>
-          <FooterMenu />
-        </div>
-        <div className='container__footer--item'>
-          <h2 className='footer_title'>Follow us</h2>
-          <Link to='facebook.com'>
-            <FacebookIcon color='primary' fontSize='large' />
-          </Link>
-          <Link to='linkedin.com'>
-            <LinkedInIcon color='primary' fontSize='large' />
-          </Link>
-        </div>
-      </div>
-      </Container>
-      <img src={Logo} />
-
+        </li>
+      </ul>
+      <Container maxWidth='sm'></Container>
     </footer>
   )
 }
 
 export default Footer
+
+/*<div className='container__footer__list'>
+<div className='container__footer--item'>
+  <h2 className='footer_title'>Om oss</h2>
+  <p className='footer_para'>
+    Lederhuset er et mindre rådgivningsselskap innen rekruttering av
+    ledere og nøkkelpersoner , nedbemanning og outplacement og generelle
+    rådgivningstjenester inne ledelse.
+  </p>
+</div>
+<div className='container__footer--item'>
+  <h2 className='footer_title'>Kontakt oss</h2>
+  <ul className='footer__contact--list'>
+    <li>
+      <span>
+        <PhoneIcon fontSize='large' />
+      </span>
+      Halfdan Kjerulfsgate 4 5017 Bergen
+    </li>
+    <li>
+      {" "}
+      <span>
+        <PlaceIcon />
+      </span>
+      (+47) 567 875 123
+    </li>
+    <li>
+      {" "}
+      <span>
+        <EmailIcon />
+      </span>
+      post@epost.no
+    </li>
+  </ul>
+</div>
+<div className='container__footer--item'>
+  <h2 className='footer_title'>Meny</h2>
+  <FooterMenu />
+</div>
+<div className='container__footer--item'>
+  <h2 className='footer_title'>Follow us</h2>
+  <Link to='facebook.com'>
+    <FacebookIcon color='primary' fontSize='large' />
+  </Link>
+  <Link to='linkedin.com'>
+    <LinkedInIcon color='primary' fontSize='large' />
+  </Link>
+</div>
+</div>
+<img src={Logo} />
+ */

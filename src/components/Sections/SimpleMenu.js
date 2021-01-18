@@ -31,7 +31,7 @@ export default function SimpleMenu() {
             className='second-menu--link'
             to='/om-oss'
           >
-            Om-oss
+            Om oss
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>

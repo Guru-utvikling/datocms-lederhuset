@@ -6,9 +6,9 @@ const SixthSection = (props) => {
       <div className='container__question--wrapper'>
         <img src='https://www.datocms-assets.com/37833/1606212086-head-icon.svg' />
         <div className='container__question--content'>
-          <h2>Do you have questions?</h2>
-          <p>
-            La oss nå om problemet ditt, og en profesjonell vil kontakte deg.
+          <h2>Har du noen spørsmål?</h2>
+          <p >
+          Send en henvendelse, så tar vi kontakt med deg. E-post eller telefon  <a  href="tel:+4740021570"> +47 400 21 570</a>
           </p>
         </div>
       </div>
@@ -34,7 +34,7 @@ const SixthSection = (props) => {
 
           <label>
             <p>
-              <a href='tel:+57 567 894 456'>OR CALL US (+57) 567 894 456</a>
+              <a href='tel:+4740021570'>Telefon: +47 400 21 570</a>
             </p>
           </label>
         </form>
