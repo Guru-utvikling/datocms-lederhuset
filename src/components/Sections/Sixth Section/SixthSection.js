@@ -8,7 +8,7 @@ const SixthSection = (props) => {
         <div className='container__question--content'>
           <h2>Har du noen spørsmål?</h2>
           <p >
-          Send en henvendelse, så tar vi kontakt med deg. E-post eller telefon  <a  href="tel:+4740021570"> +47 400 21 570</a>
+          Send en henvendelse, så tar vi kontakt med deg.
           </p>
         </div>
       </div>

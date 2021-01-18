@@ -57,5 +57,30 @@ export default function SecondSection() {
         </div>
       ))}
     </div>
+    
   )
 }
+
+
+
+
+/*    <div className='container__servicebox--section'>
+      {data.map((item) => (
+        <div key={item.id} className='container__servicebox'>
+          <div className="servicebox__image--wrapper">
+            <img className='servicebox__icon' src={item.icon}></img>
+          </div>
+
+          <div className='container__servicebox--content'>
+            <h1 className='servicebox__content--title'>{item.title}</h1>
+            <p className='servicebox__content--para'>{item.description}</p>
+            <Link
+              className='servicebox__content--link'
+              to={`servicepages/${item.slug}`}
+            >
+              Les mer
+            </Link>
+          </div>
+        </div>
+      ))}
+    </div> */
