@@ -18,10 +18,11 @@ const Footer = () => {
       <div className='footer__item--wrapper'>
         <h2 className='footer_title'>Om oss</h2>
         <p className='footer_para'>
-          Lederhuset er et mindre rådgivningsselskap innen rekruttering av
+          Lederhuset er et lokalt rådgivningsselskap innen rekruttering av
           ledere og nøkkelpersoner , nedbemanning og outplacement og generelle
           rådgivningstjenester inne ledelse.
         </p>
+        <img style={{padding:"2rem"}} src={Logo}/>
       </div>
       <div className='footer__item--wrapper'>
         <h2 className='footer_title'>Kontakt oss</h2>
@@ -33,11 +34,15 @@ const Footer = () => {
           </li>
           <li>
             <PhoneIcon fontSize='large' />
-            <p>(+47) 567 875 123</p>
+            <Link style={{color:'inherit',textDecoration:'none'}} to="tel:+47567875123">
+              <p>(+47) 567 875 123</p>
+            </Link>
           </li>
           <li>
             <EmailIcon fontSize='large' />
-            <p>post@epost.no</p>
+            <Link style={{color:'inherit',textDecoration:'none'}} to='mailto:bjarne@lederhuset.com'>
+              <p>bjarne@lederhuset.com</p>
+            </Link>
           </li>
         </ul>
       </div>
@@ -46,7 +51,7 @@ const Footer = () => {
         <FooterMenu />
       </div>
       <div className='footer__item--wrapper'>
-        <h2 className='footer_title'>Follow us</h2>
+        <h2 className='footer_title'>Følg oss</h2>
         <Link to='facebook.com'>
           <FacebookIcon color='primary' fontSize='large' />
         </Link>

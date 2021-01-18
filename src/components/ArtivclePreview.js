@@ -33,7 +33,7 @@ const ArticlePreview = (props) => {
         ))}
       </Masonry>
       <Link className='employess__CTABtn' to='/nyheter'>
-        Se alle innleggene
+      Se alle innlegg
       </Link>
     </div>
   )

@@ -27,7 +27,7 @@ const data = [
     slug: "lederutvikling",
   },
   {
-    title: "Vi rekrutterer ledere og nøkkelpersonell",
+    title: "Rekruttering",
     description:
       "Lederhuset hjelper næringslivet med å ansette gode ledere. Vi skal også hjelpe gode ledere til å finne de riktige arbeidsgiverne og riktig ny stilling.",
     id: 4,
@@ -39,7 +39,7 @@ export default function SecondSection() {
   return (
     <div className='container__servicebox--section'>
       {data.map((item) => (
-        <div key={item.id} className='container__servicebox'>
+        <div key={item.id} className={ 'container__servicebox', 'container__servicebox-'+ `${item.id}`}>
           <div className="servicebox__image--wrapper">
             <img className='servicebox__icon' src={item.icon}></img>
           </div>

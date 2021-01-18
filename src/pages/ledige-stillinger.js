@@ -53,7 +53,14 @@ const LedigeStillinger = () => {
   return (
     <Layout>
       {!dataIsLoading ? (
-        <div style={{display:"flex", flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <h1 className='nyheter__title'>Ledige stillinger</h1>
 
           <div className='container__ledige-stillinger'>
@@ -72,11 +79,10 @@ const LedigeStillinger = () => {
             <div className='container__ledige-list'>
               <ActiveJobList activelist={activeJobs} />
             </div>
-
           </div>
           <Link to='#' className='ga-top'>
-              Gå toppen
-            </Link>
+            Gå til toppen
+          </Link>
         </div>
       ) : (
         <div className='loading-div'>

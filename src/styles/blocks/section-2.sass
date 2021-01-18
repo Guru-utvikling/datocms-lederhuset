@@ -1,3 +1,22 @@
+.container__servicebox--section
+  display: grid
+  grid-template-columns: repeat(2, 550px)
+  align-items: center
+  gap: 5rem
+  justify-content: center
+.container__servicebox--content
+  width: 100%
+.container__servicebox-1,.container__servicebox-2,.container__servicebox-3,.container__servicebox-4
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: flex-end
+  width: 100%
+  text-align: center
+  img
+    height: 95px
+    width: 95px
+
 .servicebox__content--title
   font-size: 36px
   padding: 0
@@ -5,18 +24,21 @@
   color: $main
 .servicebox__content--para
   color: #605050
-
-.servicebox__icon
+  width: 100%
+  text-align: center
 
 .servicebox__content--link
   margin-top: 2rem
   text-decoration: underline
   color: $main
-.servicebox__icon
-  margin-right: 2rem
 .container__servicebox
   width: 50%
 @media screen and (max-width: 899px)
+  .container__servicebox--content
+    width: 100%
+  .container__servicebox--section
+    margin: 2rem
+    grid-template-columns: repeat(1, 1fr)
   .servicebox__content--title,.servicebox__content--para
     text-align: center
   .servicebox__content--title

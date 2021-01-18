@@ -55,14 +55,6 @@ const ActiveJobsList = (props) => {
                     <Typography component='h5' variant='h5'>
                       {props.activelist.data[item].name}
                     </Typography>
-                    <Typography component='h7' variant='h7'>
-                      <span className='small_bold'>Salary : </span>
-                      {props.activelist.data[item].salary}
-                    </Typography>
-                    <Typography component='h7' variant='h7'>
-                      <span className='small_bold'>Start Date : </span>{" "}
-                      {props.activelist.data[item].startDate}
-                    </Typography>
 
                     <Typography variant='subtitle1' color='textSecondary'>
                       {props.activelist.data[item].ingress}
@@ -74,8 +66,8 @@ const ActiveJobsList = (props) => {
           )
         })
       ) : (
-        <div className='loading-div'>
-          Vi har for tiden ingen ledige stillinger.
+        <div className="no-jobs-container" >
+          <h1>Vi har for tiden ingen ledige stillinger.</h1>
         </div>
       )}
     </>

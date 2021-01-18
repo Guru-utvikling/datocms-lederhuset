@@ -8,7 +8,7 @@ const OmOss = (props) => {
         <div className='omOss__content--wraper'>
           <h1 className='omOss__title'>Om oss</h1>
           <p className='omOss__content'>
-            Lederhuset er et mindre rådgivningsselskap innen rekruttering av
+            Lederhuset er et lokalt  rådgivningsselskap innen rekruttering av
             ledere og nøkkelpersoner, nedbemanning og outplacement og generelle
             rådgivningstjenester innen ledelse.
           </p>
