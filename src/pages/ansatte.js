@@ -16,14 +16,13 @@ const Ansatte = ({ data }) => {
               <h3>{ansatte.ansatteName}</h3>
               <p>{ansatte.ansatteDescription}</p>
               <p>
-                {" "}
-                E-post :{" "}
+                E-post :
                 <Link to={`mailto:${ansatte.ansatteEmail}`}>
                   {ansatte.ansatteEmail}
                 </Link>
               </p>
               <p>
-                Telefon:{" "}
+                Telefon:
                 <Link to={`mailto:${ansatte.ansattePhone}`}>
                   {ansatte.ansattePhone}
                 </Link>

@@ -8,7 +8,7 @@ const data = [
     id: 1,
     icon:
       "https://www.datocms-assets.com/37833/1610958243-downsizeing-icon.svg",
-    slug: "omstillingnedbemanning",
+    slug: "omstilling-nedbemanning",
   },
   {
     title: "Mentoring",
