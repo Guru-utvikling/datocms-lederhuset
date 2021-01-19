@@ -13,19 +13,17 @@ const IndexPage = ({ data }) => (
   <Layout>
     <main className='container__main'>
       <FirstSection />
-      <SecondSection />
+      <SecondSection data={data} />
       <ThirdSection />
       <FourthSection />
       <FifthSection />
-      <SixthSection /> 
-      <ArticlePreview data={data}/>
+      <SixthSection />
+      <ArticlePreview data={data} />
     </main>
   </Layout>
 )
 
 export default IndexPage
-
-
 
 export const query = graphql`
   query nyheterQueryIndexPage {
@@ -36,14 +34,32 @@ export const query = graphql`
           slug
           nyheterExcerpt
           nyheterCoverimage {
-            fluid(maxHeight: 300, imgixParams: { fm: "jpg", auto: "compress" }) {
+            fluid(
+              maxHeight: 300
+              imgixParams: { fm: "jpg", auto: "compress" }
+            ) {
               ...GatsbyDatoCmsFluid
             }
           }
         }
       }
     }
+    allDatoCmsServiceBox {
+      edges {
+        node {
+          title
+          slug
+          id
+          icon {
+            url
+          }
+          description
+        }
+      }
+    }
   }
-` 
+`
+
+
 
 
