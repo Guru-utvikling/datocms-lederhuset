@@ -15,7 +15,7 @@ const Ansatte = ({ data }) => {
               <img src={ansatte.ansatteImage.fixed.src} />
               <h3>{ansatte.ansatteName}</h3>
               <p>{ansatte.ansatteDescription}</p>
-              <p>
+              <p style={{ color:'$main',marginTop:"1rem"}}>
                 E-post :
                 <Link to={`mailto:${ansatte.ansatteEmail}`}>
                   {ansatte.ansatteEmail}

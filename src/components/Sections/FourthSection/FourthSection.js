@@ -70,6 +70,9 @@ export default function FourthSection() {
             </ListItem>
           </Link>
         </ul>
+        <Link className='employess__CTABtn' to='/kontakt-oss'>
+          KONTAKT OSS
+        </Link>
       </div>
     </div>
   )

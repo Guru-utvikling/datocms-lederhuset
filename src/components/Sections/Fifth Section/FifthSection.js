@@ -9,7 +9,7 @@ const FifthSection = () => {
       <div className='container__why-us--content'>
         <h2 className='employess__title'>Hvem er vi</h2>
         <p>
-          Lederhuset er et mindre rådgivningsselskap innen rekruttering av
+          Lederhuset er et lokalt rådgivningsselskap innen rekruttering av
           ledere og nøkkelpersoner , nedbemanning og outplacement og generelle
           rådgivningstjenester inne ledelse.
         </p>

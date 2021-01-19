@@ -2,15 +2,11 @@ import React from "react"
 import Logo from "../../../assets/lederhusetlogo.svg"
 import FooterMenu from "../../Sections/footer-menu"
 import { Link } from "gatsby"
-import { makeStyles } from "@material-ui/core/styles"
 import FacebookIcon from "@material-ui/icons/Facebook"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import PhoneIcon from "@material-ui/icons/Phone"
 import PlaceIcon from "@material-ui/icons/Place"
 import EmailIcon from "@material-ui/icons/Email"
-import ListItem from "@material-ui/core/ListItem"
-import ListItemIcon from "@material-ui/core/ListItemIcon"
-import ListItemText from "@material-ui/core/ListItemText"
 import Divider from "@material-ui/core/Divider"
 const Footer = () => {
   return (
@@ -19,10 +15,9 @@ const Footer = () => {
         <h2 className='footer_title'>Om oss</h2>
         <p className='footer_para'>
           Lederhuset er et lokalt rådgivningsselskap innen rekruttering av
-          ledere og nøkkelpersoner , nedbemanning og outplacement og generelle
-          rådgivningstjenester inne ledelse.
+          ledere og nøkkelpersoner, nedbemanning og outplacement, samt generelle
+          rådgivingstjenester innen ledelse.
         </p>
-        <img style={{padding:"2rem"}} src={Logo}/>
       </div>
       <div className='footer__item--wrapper'>
         <h2 className='footer_title'>Kontakt oss</h2>
@@ -34,13 +29,19 @@ const Footer = () => {
           </li>
           <li>
             <PhoneIcon fontSize='large' />
-            <Link style={{color:'inherit',textDecoration:'none'}} to="tel:+47567875123">
-              <p>(+47) 567 875 123</p>
+            <Link
+              style={{ color: "inherit", textDecoration: "none" }}
+              to='tel:+4740021570'
+            >
+              <p>(+47) 400 21 570</p>
             </Link>
           </li>
           <li>
             <EmailIcon fontSize='large' />
-            <Link style={{color:'inherit',textDecoration:'none'}} to='mailto:bjarne@lederhuset.com'>
+            <Link
+              style={{ color: "inherit", textDecoration: "none" }}
+              to='mailto:bjarne@lederhuset.com'
+            >
               <p>bjarne@lederhuset.com</p>
             </Link>
           </li>
