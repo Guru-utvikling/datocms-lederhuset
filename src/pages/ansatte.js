@@ -14,19 +14,20 @@ const Ansatte = ({ data }) => {
             <div className='ansatte__content--wrapper'>
               <img src={ansatte.ansatteImage.fixed.src} />
               <h3>{ansatte.ansatteName}</h3>
-              <p>{ansatte.ansatteDescription}</p>
               <p style={{ color:'$main',marginTop:"1rem"}}>
-                E-post :
+               <span style={{ color:'#A08629'}} >E-post: </span>
                 <Link to={`mailto:${ansatte.ansatteEmail}`}>
                   {ansatte.ansatteEmail}
                 </Link>
               </p>
               <p>
-                Telefon:
+              <span style={{ color:'#A08629'}} >Telefon: </span>
                 <Link to={`mailto:${ansatte.ansattePhone}`}>
                   {ansatte.ansattePhone}
                 </Link>
               </p>
+              <p>{ansatte.ansatteDescription}</p>
+
             </div>
           )
         })}
