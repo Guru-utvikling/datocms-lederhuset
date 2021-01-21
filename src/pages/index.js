@@ -27,17 +27,15 @@ export default IndexPage
 
 export const query = graphql`
   query nyheterQueryIndexPage {
-    allDatoCmsNyheter(limit: 3) {
+    allDatoCmsNyheter(limit: 5) {
       edges {
         node {
           nyheterTitle
           slug
           nyheterExcerpt
+          featuredPost
           nyheterCoverimage {
-            fluid(
-              maxHeight: 300
-              imgixParams: { fm: "jpg", auto: "compress" }
-            ) {
+            fluid(maxWidth: 500, imgixParams: { fm: "jpg", auto: "compress" }) {
               ...GatsbyDatoCmsFluid
             }
           }

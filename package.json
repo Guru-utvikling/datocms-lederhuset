@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "babel-plugin-remove-graphql-queries": "^2.13.0",
-    "prettier": "^1.17.0"
+    "prettier": "^1.17.0",
+    "react-xmasonry": "^3.0.4"
   }
 }
