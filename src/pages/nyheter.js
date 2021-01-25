@@ -4,29 +4,38 @@ import Layout from "../components/layout"
 import { Link, graphql } from "gatsby"
 
 export default function PostArchive({ data }) {
-
   return (
     <Layout>
       <h1 className='nyheter__title'>Nyheter</h1>
-      <div className='archive'>
-        {data.allDatoCmsNyheter.edges.map(({ node: nyheter }) => (
-          <article className='article'>
-            <figure className='card'>
-              <Link style={{background:`url(${nyheter.nyheterCoverimage.fluid.src})`}} to={`/nyheters/${nyheter.slug}`} className='card__image'></Link>
-              <figcaption className='card__caption'>
-                <h6 className='card__title'>
-                  <Link to={`/nyheters/${nyheter.slug}`}>
-                    {nyheter.nyheterTitle}
-                  </Link>
-                </h6>
-                <div className='card__description'>
-                  <p>{nyheter.nyheterExcerpt}</p>
-                </div>
-              </figcaption>
-            </figure>
-          </article>
-        ))}
-      </div>
+      {data.allDatoCmsNyheter.edges >= 0 ? (
+        <div style={{textAlign:'center',padding:"2rem"}}> Vi har for tiden ingen nye artikler </div>
+      ) : (
+        <div className='archive'>
+          {data.allDatoCmsNyheter.edges.map(({ node: nyheter }) => (
+            <article className='article'>
+              <figure className='card'>
+                <Link
+                  style={{
+                    background: `url(${nyheter.nyheterCoverimage.fluid.src})`,
+                  }}
+                  to={`/nyheters/${nyheter.slug}`}
+                  className='card__image'
+                ></Link>
+                <figcaption className='card__caption'>
+                  <h6 className='card__title'>
+                    <Link to={`/nyheters/${nyheter.slug}`}>
+                      {nyheter.nyheterTitle}
+                    </Link>
+                  </h6>
+                  <div className='card__description'>
+                    <p>{nyheter.nyheterExcerpt}</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+          ))}
+        </div>
+      )}
     </Layout>
   )
 }

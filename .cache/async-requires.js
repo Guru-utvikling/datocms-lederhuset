@@ -10,7 +10,6 @@ exports.components = {
   "component---src-pages-ledige-stillinger-js": () => import("./../../../src/pages/ledige-stillinger.js" /* webpackChunkName: "component---src-pages-ledige-stillinger-js" */),
   "component---src-pages-nyheter-js": () => import("./../../../src/pages/nyheter.js" /* webpackChunkName: "component---src-pages-nyheter-js" */),
   "component---src-pages-om-oss-js": () => import("./../../../src/pages/om-oss.js" /* webpackChunkName: "component---src-pages-om-oss-js" */),
-  "component---src-pages-post-gallery-js": () => import("./../../../src/pages/post-gallery.js" /* webpackChunkName: "component---src-pages-post-gallery-js" */),
   "component---src-pages-register-cv-js": () => import("./../../../src/pages/register-cv.js" /* webpackChunkName: "component---src-pages-register-cv-js" */),
   "component---src-pages-thank-you-js": () => import("./../../../src/pages/thank-you.js" /* webpackChunkName: "component---src-pages-thank-you-js" */),
   "component---src-pages-tjenester-js": () => import("./../../../src/pages/tjenester.js" /* webpackChunkName: "component---src-pages-tjenester-js" */),
