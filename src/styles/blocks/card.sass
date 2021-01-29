@@ -44,7 +44,23 @@
   color: #000
   font-size: 14px
   line-height: 1.4
-
+.card_container
+  display: flex
+  margin: 5rem
+  border-radius: 10px !important
+  padding: 2rem
+.card_logo
+  width: 40% !important
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: contain
 @media screen and (max-width: 899px)
   .card__caption
     height: 198px
+  .card_container
+    flex-direction: column
+    margin: 1rem
+    padding: 2rem
+  .card_logo
+    height: 105px
+    width: 100% !important

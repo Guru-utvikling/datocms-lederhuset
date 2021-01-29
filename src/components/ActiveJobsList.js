@@ -10,10 +10,7 @@ import Typography from "@material-ui/core/Typography"
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
-    margin: theme.spacing(5),
-    borderRadius: "10px",
-    padding: theme.spacing(3),
+
   },
   details: {
     display: "flex",
@@ -23,8 +20,9 @@ const useStyles = makeStyles((theme) => ({
     flex: "1 0 auto",
   },
   cover: {
-    width: 451,
+    
   },
+
   playIcon: {
     height: 38,
     width: 38,
@@ -40,16 +38,16 @@ const ActiveJobsList = (props) => {
       {props.activelist.data ? (
         Object.keys(props.activelist.data).map((item) => {
           return (
-            <Link  style={{textDecoration:'none'}} to={props.activelist.data[item].applyUrl} >
-              <Card
+            <Link  key={props.activelist.data[item].jobPostId}  style={{textDecoration:'none'}} to={props.activelist.data[item].applyUrl} >
+            <Card
                 key={props.activelist.data[item].jobPostId}
-                className={classes.root}
+                className="card_container"
               >
-                <CardMedia
-                  className={classes.cover}
-                  image={props.activelist.data[item].logo}
-                  title='Live from space album cover'
-                />
+                <div
+                  className="card_logo"
+                  style={{backgroundImage: `url(${props.activelist.data[item].logo})`}}
+                >
+                </div>
                 <div className={classes.details}>
                   <CardContent className={classes.content}>
                     <Typography component='h5' variant='h5'>
