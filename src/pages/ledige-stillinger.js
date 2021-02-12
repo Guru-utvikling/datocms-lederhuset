@@ -20,7 +20,13 @@ const LedigeStillinger = () => {
   const classes = useStyles()
 
   const getDataFromServer = async () => {
-    const response = await axios.get("https://lederhuset-1.herokuapp.com/data")
+    const response = await axios.get("https://lederhuset-1.herokuapp.com/data",{
+      headers:{
+        'X-Requested-With': 'XMLHttpRequest',
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json'
+      }
+    })
     const data = await response
     return data
 }
