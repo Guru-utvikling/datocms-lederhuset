@@ -3,11 +3,8 @@ import Layout from "../components/layout"
 import ActiveJobList from "../components/ActiveJobsList"
 import { makeStyles } from "@material-ui/core/styles"
 import CircularProgress from "@material-ui/core/CircularProgress"
-import Typography from "@material-ui/core/Typography"
-import Fade from "@material-ui/core/Fade"
-import Paper from "@material-ui/core/Paper"
 import { Link } from "gatsby"
-import { Divider } from "@material-ui/core"
+import axios from "axios"
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -22,25 +19,18 @@ const LedigeStillinger = () => {
   const [dataIsLoading, setDataIsLoading] = useState(true)
   const classes = useStyles()
 
-  const getAllActiveJobs = (req, res) => {
-    const proxy = "https://cors-anywhere.herokuapp.com/"
-    const api = `https://api.recman.no/v2/get/?key=${process.env.GATSBY_API_KEY}&scope=jobPost&fields=name,ingress,startDate,endDate,logo`
-    const url = proxy + api
-
-    return fetch(url, {
-      method: "GET",
-    })
-      .then((res) => {
-        return res.json()
-      })
-      .catch((err) => console.log(err))
-  }
+  const getDataFromServer = async () => {
+    const response = await axios.get("http://localhost:8080/data")
+    const data = await response
+    return data
+}
 
   const init = () => {
-    getAllActiveJobs().then((data) => {
+    getDataFromServer().then((data) => {
       if (dataIsLoading) {
         setActiveJobs(data)
         setDataIsLoading(false)
+        console.log(data)
       }
     })
   }
