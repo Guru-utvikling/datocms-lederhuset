@@ -36,7 +36,6 @@ const LedigeStillinger = () => {
       if (dataIsLoading) {
         setActiveJobs(data)
         setDataIsLoading(false)
-        console.log(data)
       }
     })
   }
