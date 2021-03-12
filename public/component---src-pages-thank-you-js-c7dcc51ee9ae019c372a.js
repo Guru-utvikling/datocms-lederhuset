@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{FWS2:function(n,e,t){"use strict";t.r(e);var a=t("q1tI"),u=t.n(a),l=t("Bl7J");e.default=function(){return u.a.createElement(l.a,null,u.a.createElement("h1",null,"Contact"),u.a.createElement("p",null,"Thank you for your submission!"))}}}]);
+//# sourceMappingURL=component---src-pages-thank-you-js-c7dcc51ee9ae019c372a.js.map
