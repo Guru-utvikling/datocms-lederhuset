@@ -17,7 +17,7 @@ const Navigation = () => {
 
       <li style={{color:"#A08629"}} >
         <SecondMenu />
-        <ExpandMoreIcon/>
+        <ExpandMoreIcon style={{color:"#A08629"}}/>
       </li>
       <li>
         <Link to='/nyheter'>Nyheter</Link>

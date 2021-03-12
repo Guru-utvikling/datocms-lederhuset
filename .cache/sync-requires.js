@@ -5,6 +5,7 @@ const preferDefault = m => (m && m.default) || m
 
 
 exports.components = {
+  "component---cache-dev-404-page-js": hot(preferDefault(require("/Users/damiankursa/Desktop/Praca Guru/Guru/Clients/Lederhuset/All files new website/LederhusetDato/.cache/dev-404-page.js"))),
   "component---src-pages-ansatte-js": hot(preferDefault(require("/Users/damiankursa/Desktop/Praca Guru/Guru/Clients/Lederhuset/All files new website/LederhusetDato/src/pages/ansatte.js"))),
   "component---src-pages-index-js": hot(preferDefault(require("/Users/damiankursa/Desktop/Praca Guru/Guru/Clients/Lederhuset/All files new website/LederhusetDato/src/pages/index.js"))),
   "component---src-pages-kontakt-oss-js": hot(preferDefault(require("/Users/damiankursa/Desktop/Praca Guru/Guru/Clients/Lederhuset/All files new website/LederhusetDato/src/pages/kontakt-oss.js"))),
