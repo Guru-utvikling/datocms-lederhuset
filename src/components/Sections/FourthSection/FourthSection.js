@@ -69,6 +69,17 @@ export default function FourthSection() {
               <ListItemText primary='Lederutvikling' />
             </ListItem>
           </Link>
+          <a
+            href={" https://lederhuset.recman.no/register.php "}
+            className='listItem__link'
+          >
+            <ListItem button>
+              <ListItemIcon>
+                <img src={CheckMarkIcon} />
+              </ListItemIcon>
+              <ListItemText primary='Registrer din CV' />
+            </ListItem>
+          </a>
         </ul>
         <Link className='employess__CTABtn' to='/kontakt-oss'>
           KONTAKT OSS
