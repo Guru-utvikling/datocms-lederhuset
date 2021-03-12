@@ -8,7 +8,7 @@ import { HelmetDatoCms } from "gatsby-source-datocms"
 import Logo from "../assets/lederhusetlogo.svg"
 import "../styles/index.scss"
 import Footer from "../components/Sections/Footer/footer"
-import Menu from "../components/Sections/menu"
+import Menu from "../components/Sections/Menu/menu"
 import Fade from "@material-ui/core/Fade"
 const TemplateWrapper = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false)
