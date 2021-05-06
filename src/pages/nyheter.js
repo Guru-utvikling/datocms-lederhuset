@@ -30,6 +30,9 @@ export default function PostArchive({ data }) {
                   <div className='card__description'>
                     <p>{nyheter.nyheterExcerpt}</p>
                   </div>
+                  <Link className="les-mer-btn" to={`/nyheters/${nyheter.slug}`}>
+                      Les mer
+                  </Link>
                 </figcaption>
               </figure>
             </article>
